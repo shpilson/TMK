@@ -1,2 +1,2 @@
 # TMK
-Landing page for TMK accelerator
+Landing page for TMK accelerators
