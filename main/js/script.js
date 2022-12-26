@@ -60,16 +60,6 @@ for (let i = 0; i < newsCard.length; i++) {
   }
 }
 
-// Создаем медиа условие, проверяющее viewports на ширину не менее 768 пикселей.
-// const mediaQuery = window.matchMedia("(min-width: 780px)");
-// if (mediaQuery.matches) {
-//   for (let i = 0; i < newsCard.length; i++) {
-//     if (i >= 1) {
-//       newsCard[i].classList.add("card-none");
-//     }
-//   }
-// }
-
 let countCard = 0;
 
 newsCard.forEach((element) => {
@@ -102,3 +92,21 @@ function loadMore() {
     newsBtn.innerHTML = "Больше";
   }
 }
+
+const menu__open = () => {};
+const menuBtn = document.querySelector(".header__mobile-btn");
+const menuContent = document.querySelector(".header__mobile");
+
+menuBtn.addEventListener("click", openMenu);
+
+function openMenu() {
+  if (menuBtn.classList.contains("active-menu")) {
+    menuBtn.classList.remove("active-menu");
+    menuContent.classList.remove("active-menu--content");
+  } else {
+    menuBtn.classList.add("active-menu");
+    menuContent.classList.add("active-menu--content");
+  }
+}
+
+menu__open();

@@ -251,6 +251,27 @@ body {
   margin: 0 auto 1.5625rem auto;
 }
 
+.header__mobile-btn {
+  position: relative;
+  z-index: 1000;
+  display: none;
+  width: 2.1875rem;
+  height: 0.625rem;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.header__mobile-btn span {
+  height: 0.125rem;
+  width: 100%;
+  background-color: #ffffff;
+}
+@media (max-width: 940px) {
+  .header__mobile-btn {
+    display: flex;
+  }
+}
+
 /*------------------BEM------------------*/
 /*------------------ОБОЛОЧКА------------------*/
 .wrapper {
@@ -284,6 +305,7 @@ body {
   justify-content: space-between;
   padding: clamp(1.25rem, 2.08vw, 2.5rem) clamp(0.9375rem, 3.65vw, 4.375rem);
   gap: clamp(0.9375rem, 1.04vw, 1.25rem);
+  align-items: center;
 }
 
 .header__logo {
@@ -291,6 +313,12 @@ body {
   max-height: 6.8125rem;
   min-width: 2.5rem;
   min-height: 2.5rem;
+}
+@media (max-width: 940px) {
+  .header__logo {
+    max-width: 2.5rem;
+    max-height: 2.5rem;
+  }
 }
 .header__logo img {
   width: 100%;
@@ -302,11 +330,6 @@ body {
 .header-right {
   align-self: flex-start;
   align-items: center;
-}
-@media (max-width: 940px) {
-  .header-right {
-    display: none;
-  }
 }
 
 .header__nav ul {
@@ -360,6 +383,11 @@ body {
 .header__nav ul li a:hover::after, .header__nav ul li a:hover::before {
   width: 50%;
 }
+@media (max-width: 940px) {
+  .header__nav {
+    display: none;
+  }
+}
 
 .header__line {
   margin-top: clamp(0.9375rem, 1.04vw, 1.25rem);
@@ -370,6 +398,49 @@ body {
 
 .header__accelerator {
   margin-left: clamp(0.9375rem, 3.13vw, 3.75rem);
+}
+@media (max-width: 940px) {
+  .header__accelerator {
+    margin-left: 0;
+  }
+}
+
+.header__mobile {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #000000;
+  transition: 0.15s;
+  -webkit-transition: 0.15s;
+  -moz-transition: 0.15s;
+  -ms-transition: 0.15s;
+  -o-transition: 0.15s;
+}
+.header__mobile.active-menu--content {
+  width: 100%;
+}
+
+.header__nav-mobile {
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.header__nav-mobile ul {
+  gap: 1.5625rem;
+}
+.header__nav-mobile ul li {
+  font-family: "EuropeC";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  color: #ffffff;
 }
 
 /*------------------HEADER------------------*/
@@ -394,6 +465,7 @@ body {
 .start__title {
   gap: clamp(0.625rem, 1.04vw, 1.25rem);
   max-width: 80.625rem;
+  padding: 0 0.9375rem;
 }
 .start__title h1,
 .start__title h4 {

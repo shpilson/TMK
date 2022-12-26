@@ -189,6 +189,28 @@ $fontArial: "Arial";
     margin: 0 auto rem(25) auto;
   }
 }
+
+.header__mobile-btn {
+  position: relative;
+  z-index: 1000;
+  display: none;
+  width: rem(35);
+  height: rem(10);
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+
+  span {
+    height: rem(2);
+    width: 100%;
+    background-color: #ffffff;
+  }
+
+  @media (max-width: 940px) {
+    display: flex;
+  }
+}
+
 /*------------------BEM------------------*/
 
 /*------------------ОБОЛОЧКА------------------*/
@@ -223,6 +245,7 @@ $fontArial: "Arial";
   justify-content: space-between;
   padding: clamp(rem(20), 2.08vw, rem(40)) clamp(rem(15), 3.65vw, rem(70));
   gap: clamp(rem(15), 1.04vw, rem(20));
+  align-items: center;
 }
 .d-fl {
 }
@@ -231,6 +254,11 @@ $fontArial: "Arial";
   max-height: rem(109);
   min-width: rem(40);
   min-height: rem(40);
+
+  @media (max-width: 940px) {
+    max-width: rem(40);
+    max-height: rem(40);
+  }
 
   img {
     width: 100%;
@@ -242,10 +270,6 @@ $fontArial: "Arial";
 .header-right {
   align-self: flex-start;
   align-items: center;
-
-  @media (max-width: 940px) {
-    display: none;
-  }
 }
 
 .header__nav {
@@ -315,6 +339,9 @@ $fontArial: "Arial";
       }
     }
   }
+  @media (max-width: 940px) {
+    display: none;
+  }
 }
 
 .header__line {
@@ -326,6 +353,49 @@ $fontArial: "Arial";
 
 .header__accelerator {
   margin-left: clamp(rem(15), 3.13vw, rem(60));
+  @media (max-width: 940px) {
+    margin-left: 0;
+  }
+}
+
+.header__mobile {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #000000;
+
+  &.active-menu--content {
+    width: 100%;
+  }
+  transition: 0.15s;
+  -webkit-transition: 0.15s;
+  -moz-transition: 0.15s;
+  -ms-transition: 0.15s;
+  -o-transition: 0.15s;
+}
+
+.header__nav-mobile {
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  ul {
+    gap: rem(25);
+    li {
+      font-family: $fontEurope;
+      font-style: normal;
+      font-weight: 400;
+      font-size: rem(24);
+      line-height: rem(28);
+
+      color: #ffffff;
+    }
+  }
 }
 /*------------------HEADER------------------*/
 
@@ -350,6 +420,7 @@ $fontArial: "Arial";
 .start__title {
   gap: clamp(rem(10), 1.04vw, rem(20));
   max-width: rem(1290);
+  padding: 0 rem(15);
 
   h1,
   h4 {
