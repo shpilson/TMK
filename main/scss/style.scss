@@ -160,7 +160,7 @@ $fontArial: "Arial";
 
 .scroll__btn {
   align-items: center;
-  padding: rem(75) 0;
+  padding: clamp(rem(40), 3.91vw, rem(75)) 0;
 }
 
 .start__btn {
@@ -376,7 +376,7 @@ $fontArial: "Arial";
 /*------------------START------------------*/
 /*------------------ABOUT------------------*/
 .section__about {
-  padding: rem(60) 0 rem(200) 0;
+  padding: rem(60) 0 clamp(rem(45), 10.42vw, rem(200)) 0;
 }
 
 .paragraph__about-wrapper {
@@ -390,6 +390,10 @@ $fontArial: "Arial";
 
 .about__info {
   padding-left: clamp(rem(5), 7.81vw, rem(150));
+
+  @media (max-width: 780px) {
+    padding-left: 0;
+  }
 }
 
 .about__info-title {
@@ -399,6 +403,7 @@ $fontArial: "Arial";
   line-height: clamp(rem(23), 1.46vw, rem(28));
   color: #444444;
   padding-bottom: rem(40);
+  align-items: center;
 
   span {
     font-family: $fontArial;
@@ -409,6 +414,14 @@ $fontArial: "Arial";
     color: $colorOrange;
     padding-right: rem(9);
   }
+
+  @media (max-width: 780px) {
+    padding: 0 rem(15);
+    margin: 0 auto;
+    text-align: center;
+    flex-direction: column;
+    padding-bottom: rem(30);
+  }
 }
 
 .about__info-bottom {
@@ -417,8 +430,13 @@ $fontArial: "Arial";
 
   @media (max-width: 780px) {
     flex-wrap: wrap-reverse;
+    padding: clamp(rem(0), 3.65vw, rem(70)) 0 rem(40) 0;
   }
 }
+.about__info-wrapper {
+  margin: 0 auto;
+}
+
 .about__info-left {
   gap: rem(20);
   flex: 1 1 rem(300);
@@ -426,6 +444,11 @@ $fontArial: "Arial";
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+
+  @media (max-width: 780px) {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 .about__card-wrapper {
@@ -470,6 +493,10 @@ $fontArial: "Arial";
     height: 100%;
     object-fit: cover;
     box-shadow: rem(4) rem(4) rem(4) rem(2) rgba(0, 0, 0, 0.3);
+  }
+
+  @media (max-width: 780px) {
+    padding-top: rem(35);
   }
 }
 
@@ -543,13 +570,13 @@ $fontArial: "Arial";
 
 /*------------------CONDITIONS------------------*/
 .section__conditions {
-  padding: rem(140) 0 rem(190) 0;
+  padding: clamp(rem(30), 7.29vw, rem(140)) 0 clamp(rem(50), 7.29vw, rem(190)) 0;
 }
 .conditions__card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(rem(200), 1fr));
   gap: rem(35);
-  padding: rem(140) clamp(rem(25), 4.69vw, rem(90)) 0
+  padding: clamp(rem(20), 7.29vw, rem(140)) clamp(rem(25), 4.69vw, rem(90)) 0
     clamp(rem(25), 4.69vw, rem(90));
 
   @media (max-width: 490px) {
@@ -655,7 +682,7 @@ $fontArial: "Arial";
 
 .search__block-wrapper {
   gap: rem(130);
-  padding: rem(120) 0 rem(85) 0;
+  padding: clamp(rem(40), 6.25vw, rem(120)) 0 rem(85) 0;
 
   @media (max-width: 780px) {
     gap: clamp(rem(5), 12.82vw, rem(100));
@@ -719,6 +746,7 @@ $fontArial: "Arial";
     line-height: clamp(rem(24), 3.07vw, rem(59));
     text-align: center;
     color: #ffffff;
+    padding: 0 rem(20);
   }
 
   @media (max-width: 780px) {
@@ -945,7 +973,7 @@ $fontArial: "Arial";
 /*------------------TEAM------------------*/
 
 .section__team {
-  padding: rem(70) 0 rem(150) 0;
+  padding: rem(70) 0 clamp(rem(90), 7.81vw, rem(150)) 0;
 
   p {
     font-family: $fontArial;
@@ -1077,7 +1105,7 @@ $fontArial: "Arial";
 
 /*------------------REQUEST------------------*/
 .section__request {
-  padding-bottom: rem(130);
+  padding-bottom: clamp(rem(60), 6.77vw, rem(130));
 }
 
 .request__title {
@@ -1111,7 +1139,7 @@ $fontArial: "Arial";
   padding: 0 clamp(rem(25), 10.42vw, rem(200));
 
   p {
-    padding: rem(140) 0 rem(80) 0;
+    padding: clamp(rem(25), 7.29vw, rem(140)) 0 rem(80) 0;
     font-family: $fontArial;
     font-weight: 400;
     font-size: clamp(rem(16), 1.25vw, rem(24));
@@ -1273,7 +1301,7 @@ $fontArial: "Arial";
 }
 
 .input__agreement {
-  padding: rem(60) 0 rem(85) 0;
+  padding: rem(60) 0 clamp(rem(45), 4.43vw, rem(85)) 0;
   align-items: center;
 
   & > .d-fl-col {
@@ -1375,8 +1403,9 @@ $fontArial: "Arial";
 .arcticle__question {
   padding: 0 clamp(rem(25), 13.02vw, rem(250)) 0
     clamp(rem(25), 10.42vw, rem(200));
-  gap: rem(75);
+  gap: clamp(rem(25), 3.91vw, rem(75));
 }
+
 .question__block {
   h3,
   p {
@@ -1403,7 +1432,7 @@ $fontArial: "Arial";
     font-size: clamp(rem(16), 2.5vw, rem(48));
     line-height: clamp(rem(18), 2.86vw, rem(55));
     color: #000000;
-    padding: rem(30) 0 rem(20) 0;
+    padding: clamp(rem(20), 1.56vw, rem(30)) 0 clamp(rem(10), 1.04vw, rem(20)) 0;
 
     &::before {
       top: 50%;
@@ -1529,8 +1558,8 @@ $fontArial: "Arial";
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(rem(300), 1fr));
   gap: rem(25);
-  padding: rem(75) clamp(rem(25), 2.6vw, rem(50)) rem(135)
-    clamp(rem(25), 2.6vw, rem(50));
+  padding: rem(75) clamp(rem(25), 2.6vw, rem(50))
+    clamp(rem(110), 7.03vw, rem(135)) clamp(rem(25), 2.6vw, rem(50));
 }
 
 .news__card {
