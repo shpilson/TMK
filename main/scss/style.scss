@@ -170,6 +170,7 @@ $fontArial: "Arial";
   line-height: 110%;
   text-align: center;
   color: #7a7a7a;
+  cursor: pointer;
 
   &::before {
     content: " ";
@@ -1691,6 +1692,13 @@ $fontArial: "Arial";
   -o-transition: 0.3s;
   cursor: pointer;
 
+  @media (max-width: 480px) {
+    &:nth-child(2),
+    &:nth-child(3) {
+      display: none;
+    }
+  }
+
   &:hover {
     border-color: $colorOrange;
   }
@@ -1724,9 +1732,9 @@ $fontArial: "Arial";
   }
 
   h6 {
-    font-size: rem(20);
-    line-height: rem(23);
-    padding: 0 rem(15) rem(30) rem(15);
+    font-size: clamp(rem(15), 1.04vw, rem(20));
+    line-height: clamp(rem(17), 1.2vw, rem(23));
+    padding: 0 rem(15) clamp(rem(10), 1.56vw, rem(30)) rem(15);
   }
 }
 
@@ -1740,12 +1748,12 @@ $fontArial: "Arial";
   left: 50%;
   font-family: $fontArial;
   font-weight: 400;
-  font-size: rem(20);
-  line-height: rem(23);
+  font-size: clamp(rem(16), 1.04vw, rem(20));
+  line-height: clamp(rem(18), 1.2vw, rem(23));
   color: #1e1e1e;
-  padding: rem(20) rem(30);
+  padding: clamp(rem(15), 1.04vw, rem(20)) clamp(rem(20), 1.56vw, rem(30));
   border: rem(2) solid #6b6b6b;
-  margin-left: rem(-70);
+  margin-left: adaptiv-num-rem(-50, -70, 1920, 360);
   transition: 0.3s;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;

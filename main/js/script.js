@@ -52,47 +52,6 @@ const labelRequired = () => {
 };
 labelRequired();
 
-let newsCard = document.querySelectorAll(".news__card");
-
-for (let i = 0; i < newsCard.length; i++) {
-  if (i >= 3) {
-    newsCard[i].classList.add("card-none");
-  }
-}
-
-let countCard = 0;
-
-newsCard.forEach((element) => {
-  if (!element.classList.contains("card-none")) {
-    countCard++;
-  }
-});
-
-function loadMore() {
-  let newsBtn = document.querySelector(".news__btn-more");
-
-  if (countCard >= 3) {
-    newsCard.forEach((element) => {
-      element.classList.remove("card-none");
-      countCard = 0;
-    });
-    newsBtn.innerHTML = "Меньше";
-  } else {
-    for (let i = 0; i < newsCard.length; i++) {
-      if (i >= 3) {
-        newsCard[i].classList.add("card-none");
-      }
-    }
-
-    newsCard.forEach((element) => {
-      if (!element.classList.contains("card-none")) {
-        countCard++;
-      }
-    });
-    newsBtn.innerHTML = "Больше";
-  }
-}
-
 const menu__open = () => {};
 const menuBtn = document.querySelector(".header__mobile-btn");
 const menuContent = document.querySelector(".header__mobile");
