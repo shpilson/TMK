@@ -55,6 +55,7 @@ labelRequired();
 const menu__open = () => {};
 const menuBtn = document.querySelector(".header__mobile-btn");
 const menuContent = document.querySelector(".header__mobile");
+const phoneBodyScroll = document.querySelector("#phone__menu-id-body");
 
 menuBtn.addEventListener("click", openMenu);
 
@@ -62,9 +63,11 @@ function openMenu() {
   if (menuBtn.classList.contains("active-menu")) {
     menuBtn.classList.remove("active-menu");
     menuContent.classList.remove("active-menu--content");
+    phoneBodyScroll.style.overflow = "visible";
   } else {
     menuBtn.classList.add("active-menu");
     menuContent.classList.add("active-menu--content");
+    phoneBodyScroll.style.overflow = "hidden";
   }
 }
 

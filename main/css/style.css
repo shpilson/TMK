@@ -257,20 +257,54 @@ body {
   z-index: 1000;
   display: none;
   width: 2.1875rem;
-  height: 0.625rem;
+  height: 2.1875rem;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
+  position: relative;
+}
+.header__mobile-btn:hover > span {
+  background-color: #dd6f2d;
 }
 .header__mobile-btn span {
+  position: absolute;
   height: 0.125rem;
   width: 100%;
   background-color: #ffffff;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.header__mobile-btn span:first-child {
+  top: 0.6875rem;
+  left: 0;
+}
+.header__mobile-btn span:last-child {
+  bottom: 0.6875rem;
+  left: 0;
 }
 @media (max-width: 940px) {
   .header__mobile-btn {
     display: flex;
   }
+}
+.header__mobile-btn.active-menu span:first-child {
+  top: 1rem;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+.header__mobile-btn.active-menu span:last-child {
+  bottom: 1rem;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
 }
 
 /*------------------BEM------------------*/
@@ -300,6 +334,7 @@ body {
 /*------------------HEADER------------------*/
 .header {
   position: absolute;
+  z-index: 999;
   top: 0;
   left: 0;
   width: 100%;
@@ -314,6 +349,7 @@ body {
   max-height: 6.8125rem;
   min-width: 2.5rem;
   min-height: 2.5rem;
+  cursor: pointer;
 }
 @media (max-width: 940px) {
   .header__logo {
@@ -455,15 +491,36 @@ body {
   min-height: 100vh;
   padding-top: 6.875rem;
   padding-bottom: 6.875rem;
-  background-image: url("/main/img/background/backgroundStart.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.start__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 0;
+}
+.start__video-back {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .start__title {
+  position: relative;
+  z-index: 2;
   gap: clamp(0.625rem, 1.04vw, 1.25rem);
   max-width: 80.625rem;
   padding: 0 0.9375rem;
