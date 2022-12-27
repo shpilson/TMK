@@ -1301,16 +1301,16 @@ body {
   color: #6b6b6b;
   top: -20px;
   opacity: 1;
-  font-size: 0.9375rem;
-  line-height: 1.0625rem;
+  font-size: clamp(0.75rem, 0.78vw, 0.9375rem);
+  line-height: clamp(0.9375rem, 0.89vw, 1.0625rem);
 }
 
 .input__form:not(:-ms-input-placeholder).input__form:not(:focus) ~ .label__form {
   color: #6b6b6b;
   top: -20px;
   opacity: 1;
-  font-size: 0.9375rem;
-  line-height: 1.0625rem;
+  font-size: clamp(0.75rem, 0.78vw, 0.9375rem);
+  line-height: clamp(0.9375rem, 0.89vw, 1.0625rem);
 }
 
 .input__form:focus ~ .label__form,
@@ -1318,8 +1318,8 @@ body {
   color: #6b6b6b;
   top: -20px;
   opacity: 1;
-  font-size: 0.9375rem;
-  line-height: 1.0625rem;
+  font-size: clamp(0.75rem, 0.78vw, 0.9375rem);
+  line-height: clamp(0.9375rem, 0.89vw, 1.0625rem);
 }
 
 .input__form:not(:-moz-placeholder-shown).input__form:not(:focus) {

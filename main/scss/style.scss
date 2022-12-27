@@ -1311,8 +1311,8 @@ $fontArial: "Arial";
   color: #6b6b6b;
   top: -20px;
   opacity: 1;
-  font-size: rem(15);
-  line-height: rem(17);
+  font-size: clamp(rem(12), 0.78vw, rem(15));
+  line-height: clamp(rem(15), 0.89vw, rem(17));
 }
 
 .input__form:focus,
