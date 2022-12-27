@@ -1238,6 +1238,20 @@ $fontArial: "Arial";
   position: relative;
   flex: 1 1 rem(300);
 
+  &:hover > .label__form {
+    color: #d94221;
+  }
+
+  &:hover > .input__form {
+    border-color: #d94221;
+  }
+
+  &:hover > .input__required {
+    &::after {
+      color: #d94221;
+    }
+  }
+
   &-last {
     position: relative;
     width: 75%;
@@ -1263,6 +1277,12 @@ $fontArial: "Arial";
   position: absolute;
   top: 0;
   left: 0;
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
 }
 
 .input__form {
@@ -1274,12 +1294,41 @@ $fontArial: "Arial";
   font-size: clamp(rem(16), 1.25vw, rem(24));
   line-height: clamp(rem(18), 1.46vw, rem(28));
   color: #6b6b6b;
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.input__form:focus {
+  border-color: $colorOrange;
+}
+
+.input__form:focus ~ .label__form,
+.input__form:not(:placeholder-shown).input__form:not(:focus) ~ .label__form {
+  color: #6b6b6b;
+  top: -20px;
+  opacity: 1;
+  font-size: rem(15);
+  line-height: rem(17);
+}
+
+.input__form:focus,
+.input__form:not(:placeholder-shown).input__form:not(:focus) {
+  color: #6b6b6b;
 }
 
 .input__required {
   &::after {
     content: "*";
     color: $colorOrange;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
   }
 }
 
@@ -1697,6 +1746,15 @@ $fontArial: "Arial";
   padding: rem(20) rem(30);
   border: rem(2) solid #6b6b6b;
   margin-left: rem(-70);
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+
+  &:hover {
+    border-color: $colorOrange;
+  }
 }
 
 /*------------------NEWS------------------*/
