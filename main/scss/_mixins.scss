@@ -77,7 +77,7 @@ $maxWidth: 1440;
   $maxWidth: 1440,
   $minWidth: 320
 ) {
-  $minF: $min / 16;
+  $minF: calc($min / 16);
   $result: calc(
     #{$minF + rem} + (#{$maxF} - #{$minF * 16}) * ((100vw - #{$minWidth + px}) /
           (#{$maxWidth} - #{$minWidth}))
