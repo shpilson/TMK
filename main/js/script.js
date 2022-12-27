@@ -110,3 +110,17 @@ function openMenu() {
 }
 
 menu__open();
+
+const btn__top = () => {
+  function backToTop() {
+    if (window.pageYOffset > 0) {
+      window.scrollBy(0, -150);
+      setTimeout(backToTop, 0);
+    }
+  }
+
+  goTopBtn = document.querySelector(".js-back__top");
+  goTopBtn.addEventListener("click", backToTop);
+};
+
+btn__top();
