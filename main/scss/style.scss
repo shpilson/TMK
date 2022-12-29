@@ -18,6 +18,10 @@ body {
   background-color: #d5d5d5;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 // ---------Переменные-----------
 // Dark Blue
 $colorDark: #1e1e1e;
@@ -114,14 +118,17 @@ $fontArial: "Arial";
   -o-transition: 0.3s;
 
   &:hover {
-    color: $colorOrange;
+    color: #ffffff;
+    background-color: $colorOrange;
     border: rem(2) solid $colorOrange;
   }
 
   &:active {
-    color: #ffffff;
-    background-color: $colorOrange;
-    border: rem(2) solid $colorOrange;
+    transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    -o-transform: scale(0.95);
   }
 }
 
@@ -182,7 +189,7 @@ $fontArial: "Arial";
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    background-image: url("/main/img/icon/arrow-top.svg");
+    background-image: url("../../main/img/icon/arrow-top.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -423,11 +430,16 @@ $fontArial: "Arial";
   -o-transition: 0.15s;
 }
 
-.header__nav-mobile {
+.header__mobile-wrapper {
   height: 100%;
-  width: 100%;
+  padding: rem(25);
+}
+
+.header__nav-mobile {
+  flex: 1 1 auto;
   align-items: center;
   justify-content: center;
+
   ul {
     gap: rem(25);
     li {
@@ -441,6 +453,12 @@ $fontArial: "Arial";
     }
   }
 }
+
+.header__nav-mobile-bottom {
+  flex: 0 0 auto;
+  gap: rem(20);
+  justify-content: space-between;
+}
 /*------------------HEADER------------------*/
 
 /*------------------MAIN------------------*/
@@ -453,7 +471,7 @@ $fontArial: "Arial";
   min-height: 100vh;
   padding-top: rem(110);
   padding-bottom: rem(110);
-  // background-image: url("/main/img/background/backgroundStart.png");
+  // background-image: url("../../main/img/background/backgroundStart.png");
   // background-repeat: no-repeat;
   // background-size: cover;
   // background-position: center;
@@ -475,7 +493,7 @@ $fontArial: "Arial";
     height: 100%;
     width: 100%;
     position: absolute;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
     top: 0;
     left: 0;
@@ -646,7 +664,7 @@ $fontArial: "Arial";
 }
 .offers__description {
   margin-top: rem(75);
-  background-image: url("/main/img/background/offers.png");
+  background-image: url("../../main/img/background/offers.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -723,8 +741,51 @@ $fontArial: "Arial";
     grid-template-columns: repeat(auto-fit, minmax(rem(180), 1fr));
   }
 }
-.conditions__card {
+
+.conditions__card-wrapper {
+  position: relative;
+
+  &:hover > .conditions__card-back {
+    top: rem(10);
+    left: rem(-10);
+  }
+
+  &:hover > .conditions__card {
+    h5,
+    p {
+      color: $colorOrange;
+    }
+  }
+
+  &:hover > .conditions__card > .conditions__card-img {
+    svg {
+      fill: white;
+    }
+  }
+
+  // &:nth-child(5):hover > .conditions__card-back {
+  //   top: rem(10);
+  //   left: rem(-10);
+  // }
+}
+
+.conditions__card-back {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
   background-color: $colorOrange;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.conditions__card {
+  background-color: #cbcbcb;
   position: relative;
   z-index: 0;
   padding: rem(20) rem(25) rem(25) clamp(rem(20), 2.08vw, rem(40));
@@ -733,6 +794,11 @@ $fontArial: "Arial";
   p {
     color: #000000;
     font-weight: 400;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
   }
 
   h5 {
@@ -756,51 +822,6 @@ $fontArial: "Arial";
     font-size: clamp(rem(16), 1.25vw, rem(24));
     line-height: clamp(rem(18), 1.46vw, rem(28));
   }
-
-  &:nth-child(1),
-  &:nth-child(2),
-  &:nth-child(3),
-  &:nth-child(4),
-  &:nth-child(5) {
-    &::before {
-      content: " ";
-      position: absolute;
-      display: block;
-      width: 100%;
-      height: 100%;
-      bottom: rem(10);
-      background-color: #cbcbcb;
-      z-index: -1;
-    }
-  }
-
-  &:nth-child(1),
-  &:nth-child(2) {
-    &::before {
-      left: rem(10);
-    }
-  }
-
-  &:nth-child(3) {
-    &::before {
-      left: 0;
-
-      @media (max-width: 1260px) {
-        left: rem(10);
-      }
-    }
-  }
-
-  &:nth-child(4),
-  &:nth-child(5) {
-    &::before {
-      right: rem(10);
-
-      @media (max-width: 1260px) {
-        left: rem(10);
-      }
-    }
-  }
 }
 
 .conditions__card-img {
@@ -808,10 +829,16 @@ $fontArial: "Arial";
   height: clamp(rem(40), 3.85vw, rem(74));
   margin: 0 auto;
 
-  img {
+  svg {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    fill: black;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
   }
 }
 /*------------------CONDITIONS------------------*/
@@ -973,7 +1000,7 @@ $fontArial: "Arial";
 
 .stages__block-wrapper {
   margin-top: rem(75);
-  background-image: url("/main/img/background/stages.png");
+  background-image: url("../../main/img/background/stages.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -981,7 +1008,7 @@ $fontArial: "Arial";
 
   @media (max-width: 529px) {
     padding: rem(40) rem(20);
-    background-image: url("/main/img/background/stages-mobile.png");
+    background-image: url("../../main/img/background/stages-mobile.png");
   }
 }
 
@@ -1024,7 +1051,7 @@ $fontArial: "Arial";
         width: rem(16);
         height: rem(45);
 
-        background-image: url("/main/img/icon/arrow-bottom.svg");
+        background-image: url("../../main/img/icon/arrow-bottom.svg");
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
@@ -1048,7 +1075,7 @@ $fontArial: "Arial";
         width: clamp(rem(45), 6.88vw, rem(132));
         height: clamp(rem(8), 6.88vw, rem(16));
 
-        background-image: url("/main/img/icon/arrow.svg");
+        background-image: url("../../main/img/icon/arrow.svg");
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
@@ -1137,6 +1164,7 @@ $fontArial: "Arial";
   margin: 0 rem(30) 0 0;
 
   &-img {
+    margin: rem(10);
     max-width: rem(350);
     max-height: rem(350);
     position: relative;
@@ -1150,6 +1178,7 @@ $fontArial: "Arial";
     border: rem(2) solid $colorOrange;
 
     img {
+      margin: rem(10);
       position: absolute;
       top: 0;
       right: 0;
@@ -1161,6 +1190,20 @@ $fontArial: "Arial";
       -moz-transform: translateY(rem(35));
       -ms-transform: translateY(rem(35));
       -o-transform: translateY(rem(35));
+    }
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+
+    &:hover {
+      background-color: $colorOrange;
+      transform: scale(1.05);
+      -webkit-transform: scale(1.05);
+      -moz-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+      -o-transform: scale(1.05);
     }
   }
 }
@@ -1200,12 +1243,13 @@ $fontArial: "Arial";
 }
 
 /* Слайдер */
-.slick-slider {
+.slider.slick-slider {
   min-width: 0;
 }
 /* Ограничивающая оболочка */
-.slick-list {
+.slider .slick-list {
   overflow: hidden;
+  margin: 0 auto;
 }
 /* Лента слайдов */
 .slick-track {
@@ -1223,17 +1267,22 @@ $fontArial: "Arial";
 
 .slider .slick-arrow.slick-next {
   right: clamp(rem(30), 4.43vw, rem(85));
-  background: url("/main/img/icon/arrow-slider.svg") 0 0 / 100% no-repeat;
+  background: url("../../main/img/icon/arrow-slider.svg") 0 0 / 100% no-repeat;
   background-position: center;
   background-size: contain;
   width: clamp(rem(30), 5.73vw, rem(110));
   height: rem(15);
   cursor: pointer;
 
-  @media (max-width: 900px) {
-    background: url("/main/img/icon/arrow-slider-mobile.svg") 0 0 / 100%
+  @media (max-width: 899px) {
+    background: url("../../main/img/icon/arrow-slider-mobile.svg") 0 0 / 100%
       no-repeat;
     height: rem(30);
+    top: clamp(rem(30), 16.69vw, rem(150));
+  }
+
+  @media (max-width: 579px) {
+    top: clamp(rem(50), 34.54vw, rem(200));
   }
 }
 .slider .slick-arrow.slick-disabled {
@@ -1561,7 +1610,7 @@ $fontArial: "Arial";
 .custom-radio:checked + label::before {
   border-color: #000000;
   background-color: #d5d5d5;
-  background-image: url(/main/img/icon/check.svg);
+  background-image: url(../../main/img/icon/check.svg);
 }
 
 .custom-radio:disabled + label::before {
@@ -1836,13 +1885,14 @@ $fontArial: "Arial";
 /*------------------NEWS------------------*/
 /*------------------INFO------------------*/
 .section__info {
-}
-.info__block {
-  min-height: 100vh;
-  background-image: url("/main/img/background/info.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  .start__video {
+    height: 100%;
+    width: 100%;
+  }
 }
 /*------------------INFO------------------*/
 
@@ -1852,7 +1902,7 @@ $fontArial: "Arial";
 .footer {
   background-color: #000000;
   padding: rem(85) rem(80) rem(100) rem(80);
-  display: none;
+  // display: none;
 }
 
 .footer-top {
@@ -1866,6 +1916,7 @@ $fontArial: "Arial";
   margin: 0 auto;
   text-align: center;
   gap: rem(30);
+  padding-bottom: adaptiv-num-rem(40, 135, 1920, 360);
   span,
   a {
     font-family: $fontEurope;
@@ -1885,6 +1936,11 @@ $fontArial: "Arial";
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  gap: rem(30);
+
+  @media (max-width: 600px) {
+    justify-content: center;
+  }
 
   &-left {
     span {
@@ -1894,15 +1950,15 @@ $fontArial: "Arial";
       line-height: rem(28);
       color: #7a7a7a;
     }
+
+    @media (max-width: 600px) {
+      order: 2;
+    }
   }
 
   &-center {
-    padding-top: rem(135);
-    & > .request__btn {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      margin-left: rem(-190);
+    @media (max-width: 600px) {
+      order: 1;
     }
   }
 
@@ -1912,6 +1968,11 @@ $fontArial: "Arial";
     font-size: rem(24);
     line-height: rem(28);
     color: #7a7a7a;
+    text-align: center;
+
+    @media (max-width: 600px) {
+      order: 3;
+    }
   }
 }
 /*------------------FOOTER------------------*/

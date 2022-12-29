@@ -22,7 +22,7 @@ const slider = () => {
           },
         },
         {
-          breakpoint: 480,
+          breakpoint: 580,
           settings: {
             slidesToShow: 1,
           },
@@ -76,7 +76,7 @@ menu__open();
 const btn__top = () => {
   function backToTop() {
     if (window.pageYOffset > 0) {
-      window.scrollBy(0, -150);
+      window.scrollBy(0, -1000);
       setTimeout(backToTop, 0);
     }
   }
