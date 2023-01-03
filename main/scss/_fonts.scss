@@ -1,12 +1,39 @@
-// @font-face {
-//   font-family: "Cormorant Garamond";
-//   src: url("../fonts/Cormorant_Garamond/CormorantGaramond-Bold.woff2")
-//       format("woff2"),
-//     url("../fonts/Cormorant_Garamond/CormorantGaramond-Bold.woff")
-//       format("woff"),
-//     url("../fonts/Cormorant_Garamond/CormorantGaramond-Bold.ttf")
-//       format("truetype");
-//   font-style: normal;
-//   font-weight: 700;
-//   font-display: swap;
-// }
+@font-face {
+  font-family: "EuropeC";
+  src: url("../fonts/europec/europec.woff2") format("woff2"),
+    url("../fonts/europec/europec.woff") format("woff"),
+    url("../fonts/europec/europec.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EuropeC";
+  src: url("../fonts/europec/europec-bold.woff2") format("woff2"),
+    url("../fonts/europec/europec-bold.woff") format("woff"),
+    url("../fonts/europec/europec-bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/arial/arial.woff2") format("woff2"),
+    url("../fonts/arial/arial.woff") format("woff"),
+    url("../fonts/arial/arial.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/arial/arial-bold.woff2") format("woff2"),
+    url("../fonts/arial/arial-bold.woff") format("woff"),
+    url("../fonts/arial/arial-bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}

@@ -25,7 +25,7 @@
     <meta property="og:image" content="https://innovations.tmk-group.ru/" />
     <link rel="canonical" href="https://innovations.tmk-group.ru/" />
 
-    <link rel="stylesheet" type="text/css" href="main/css/style.css?v=9" />
+    <link rel="stylesheet" type="text/css" href="main/css/style.css?v=16" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="/favicon.ico" />
 
@@ -35,67 +35,89 @@
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
 
-    <script src="main/js/script.js?v=9" defer></script>
+    <script src="main/js/script.js?v=16" defer></script>
   </head>
 
   <body id="phone__menu-id-body">
     <div class="wrapper">
-      <header class="header d-fl">
-        <div class="header__logo">
-          <img src="main/img/icon/tmkLogo.svg" alt="logo" />
-        </div>
+      <header id="header" class="header d-fl">
+        <a href="/" class="header__logo">
+          <svg>
+            <use xlink:href="main/sprite/icon.svg#icon-logo"></use>
+          </svg>
+        </a>
         <div class="header-right d-fl">
           <nav class="header__nav d-fl-col">
             <ul class="d-fl">
-              <li><a href="/">О нас</a></li>
-              <li><a href="/">Мы предлагаем</a></li>
-              <li><a href="/">Условия</a></li>
-              <li><a href="/">Направления</a></li>
-              <li><a href="/">Этапы</a></li>
-              <li><a href="/">Команда</a></li>
-              <li><a href="/">Частые вопросы</a></li>
-              <li><a href="/">Новости</a></li>
+              <li><a href="#about">О нас</a></li>
+              <li><a href="#offer">Мы предлагаем</a></li>
+              <li><a href="#conditions">Условия</a></li>
+              <li><a href="#directions">Направления</a></li>
+              <li><a href="#stages">Этапы</a></li>
+              <li><a href="#team">Команда</a></li>
+              <li><a href="#questions">Частые вопросы</a></li>
+              <li><a href="#news">Новости</a></li>
             </ul>
             <hr class="header__line" />
           </nav>
-          <div class="d-fl">
-            <a
-              class="accelerator__btn header__accelerator btn__animation-orange"
-              href="/"
-              >Акселератор</a
-            >
-            <a class="request__link" href="/">Подать заявку</a>
-          </div>
         </div>
+
+        <div class="header__btn d-fl">
+          <a
+            class="accelerator__btn header__accelerator btn__animation-orange"
+            href="#feedback"
+            >Акселератор</a
+          >
+          <a class="request__link" href="#feedback">Подать заявку</a>
+        </div>
+
         <div class="header__mobile-btn">
           <span></span>
           <span></span>
         </div>
         <div class="header__mobile">
           <div class="header__mobile-wrapper d-fl-col">
+            <div class="header__mobile-btn--close">
+              <span></span>
+              <span></span>
+            </div>
+
             <nav class="header__nav-mobile d-fl-col">
               <ul class="d-fl-col">
-                <li><a href="/">О нас</a></li>
-                <li><a href="/">Мы предлагаем</a></li>
-                <li><a href="/">Условия</a></li>
-                <li><a href="/">Направления</a></li>
-                <li><a href="/">Этапы</a></li>
-                <li><a href="/">Команда</a></li>
-                <li><a href="/">Частые вопросы</a></li>
-                <li><a href="/">Новости</a></li>
+                <li><a class="header__nav-link" href="#about">О нас</a></li>
+                <li>
+                  <a class="header__nav-link" href="#offer">Мы предлагаем</a>
+                </li>
+                <li>
+                  <a class="header__nav-link" href="#conditions">Условия</a>
+                </li>
+                <li>
+                  <a class="header__nav-link" href="#directions">Направления</a>
+                </li>
+                <li><a class="header__nav-link" href="#stages">Этапы</a></li>
+                <li><a class="header__nav-link" href="#team">Команда</a></li>
+                <li>
+                  <a class="header__nav-link" href="#questions"
+                    >Частые вопросы</a
+                  >
+                </li>
+                <li><a class="header__nav-link" href="#news">Новости</a></li>
               </ul>
             </nav>
 
             <div class="header__nav-mobile-bottom d-fl">
               <div class="header__logo">
-                <img src="main/img/icon/tmkLogo.svg" alt="logo" />
+                <svg>
+                  <use xlink:href="main/sprite/icon.svg#icon-logo"></use>
+                </svg>
               </div>
 
               <a
                 class="accelerator__btn header__accelerator btn__animation-orange"
-                href="/"
+                href="#feedback"
                 >Акселератор</a
               >
+
               <div style="width: 40px"></div>
             </div>
           </div>
@@ -104,11 +126,19 @@
 
       <main class="main">
         <section class="section__start d-fl-col">
-          <video preload="auto" autoplay muted loop class="start__video">
+          <video
+            poster="main/img/background/backgroundStart.webp"
+            preload="auto"
+            autoplay
+            muted
+            loop
+            class="start__video"
+          >
+            <source type="video/webm" src="main/video/TMK-R&D-01-Home.webm" />
             <source type="video/mp4" src="main/video/TMK-R&D-01-Home.mp4" />
           </video>
           <div class="start__video-back"></div>
-          <div class="start__title d-fl-col">
+          <div class="start__title d-fl-col start__block-animation">
             <h1>
               Станьте участником программы по внедрению инновационных решений
               на предприятиях Группы ТМК
@@ -120,11 +150,11 @@
           </div>
         </section>
 
-        <section class="section__about">
+        <section id="about" class="section__about">
           <article>
-            <h4 class="title__section">О нас</h4>
+            <h4 class="title__section title-animation">О нас</h4>
             <div class="paragraph__about-wrapper d-fl-col">
-              <p class="paragraph__section">
+              <p class="paragraph__section about__paragraph-animation-left">
                 Трубная Металлургическая Компания <span>(ТМК)</span> — является
                 глобальным поставщиком стальных труб, трубных решений
                 и сопутствующих сервисов для нефтегазового сектора. Наибольшую
@@ -134,7 +164,7 @@
                 химической промышленности, машиностроения, строительства
                 и других отраслей.
               </p>
-              <p class="paragraph__section">
+              <p class="paragraph__section about__paragraph-animation-right">
                 Мощности компании обеспечивают полный цикл создания передовых
                 трубных решений — от концепта до проведения испытаний и запуска
                 в производство. ТМК располагает разветвленной сбытовой сетью,
@@ -152,27 +182,27 @@
                   <p>В мире по объему реализации стальных труб</p>
                 </div>
                 <div class="about__info-left">
-                  <div class="about__card">
+                  <div class="about__card about__card-animation--1">
                     <span>429</span>
                     <p>Млрд рублей — выручка за 2021 год</p>
                   </div>
-                  <div class="about__card">
+                  <div class="about__card about__card-animation--1">
                     <span>500+</span>
                     <p>Проектов в портфеле</p>
                   </div>
-                  <div class="about__card">
+                  <div class="about__card about__card-animation--2">
                     <span>6</span>
                     <p>Крупных трубных заводов в России</p>
                   </div>
-                  <div class="about__card">
+                  <div class="about__card about__card-animation--2">
                     <span>30</span>
                     <p>Проектов для пилотирования</p>
                   </div>
-                  <div class="about__card">
+                  <div class="about__card about__card-animation--3">
                     <span>4,3</span>
                     <p>Млн тонн труб реализовано в 2021 году</p>
                   </div>
-                  <div class="about__card">
+                  <div class="about__card about__card-animation--3">
                     <span>5</span>
                     <p>Проектов под пилотное внедрение</p>
                   </div>
@@ -180,17 +210,19 @@
               </div>
 
               <div class="about__info-right">
-                <img src="main/img/photo/about.png" alt="about" />
+                <img src="main/img/photo/about.webp" alt="about" />
               </div>
             </div>
           </div>
         </section>
 
-        <section class="section__offers">
-          <h4 class="title__section">Мы предлагаем проекту</h4>
+        <section id="offer" class="section__offers">
+          <h4 class="title__section title-animation">Мы предлагаем проекту</h4>
 
           <div class="offers__description d-fl-col">
-            <div class="offers__description-block d-fl">
+            <div
+              class="offers__description-block d-fl about__paragraph-animation-left"
+            >
               <div class="offers__description-block--img">
                 <img src="main/img/icon/offers-review.png" alt="offers" />
               </div>
@@ -199,7 +231,9 @@
                 доступ к экспертизе
               </p>
             </div>
-            <div class="offers__description-block d-fl">
+            <div
+              class="offers__description-block d-fl about__paragraph-animation-right"
+            >
               <div class="offers__description-block--img">
                 <img src="main/img/icon/offers-idea.png" alt="offers" />
               </div>
@@ -211,11 +245,11 @@
           </div>
         </section>
 
-        <section class="section__conditions">
-          <h4 class="title__section">Условия</h4>
+        <section id="conditions" class="section__conditions">
+          <h4 class="title__section title-animation">Условия</h4>
 
           <div class="conditions__card-grid">
-            <div class="conditions__card-wrapper d-fl">
+            <div class="conditions__card-wrapper d-fl card-animation-1">
               <div class="conditions__card">
                 <h5>Продукт <br /><br /></h5>
                 <div class="conditions__card-img">
@@ -230,7 +264,7 @@
               <div class="conditions__card-back"></div>
             </div>
 
-            <div class="conditions__card-wrapper d-fl">
+            <div class="conditions__card-wrapper d-fl card-animation-2">
               <div class="conditions__card">
                 <h5>Соответствие <br /><br /></h5>
                 <div class="conditions__card-img">
@@ -243,7 +277,7 @@
               <div class="conditions__card-back"></div>
             </div>
 
-            <div class="conditions__card-wrapper d-fl">
+            <div class="conditions__card-wrapper d-fl card-animation-3">
               <div class="conditions__card">
                 <h5>Готовность <br /><br /></h5>
                 <div class="conditions__card-img">
@@ -256,7 +290,7 @@
               <div class="conditions__card-back"></div>
             </div>
 
-            <div class="conditions__card-wrapper d-fl">
+            <div class="conditions__card-wrapper d-fl card-animation-4">
               <div class="conditions__card">
                 <h5>Личное участие</h5>
                 <div class="conditions__card-img">
@@ -272,7 +306,7 @@
               <div class="conditions__card-back"></div>
             </div>
 
-            <div class="conditions__card-wrapper d-fl">
+            <div class="conditions__card-wrapper d-fl card-animation-5">
               <div class="conditions__card">
                 <h5>Команда <br /><br /></h5>
                 <div class="conditions__card-img">
@@ -290,15 +324,15 @@
           </div>
         </section>
 
-        <section class="section__search">
-          <h4 class="title__section">Направления поиска</h4>
+        <section id="directions" class="section__search">
+          <h4 class="title__section title-animation">Направления поиска</h4>
 
           <div class="search__block-wrapper d-fl-col">
-            <div class="search__block d-fl-wrap">
+            <div class="search__block d-fl-wrap start__block-animation">
               <div class="search__block-img">
                 <div class="search-img">
                   <img
-                    src="main/img/photo/search-industrial.png"
+                    src="main/img/photo/search-industrial.webp"
                     alt="industrial"
                   />
                 </div>
@@ -330,11 +364,13 @@
               </div>
             </div>
 
-            <div class="search__block search__block--reverse d-fl-wrap">
+            <div
+              class="search__block search__block--reverse d-fl-wrap start__block-animation"
+            >
               <div class="search__block-img">
                 <div class="search-img">
                   <img
-                    src="main/img/photo/search-technology.png"
+                    src="main/img/photo/search-technology.webp"
                     alt="industrial"
                   />
                 </div>
@@ -361,11 +397,11 @@
                 </ul>
               </div>
             </div>
-            <div class="search__block d-fl-wrap">
+            <div class="search__block d-fl-wrap start__block-animation">
               <div class="search__block-img">
                 <div class="search-img">
                   <img
-                    src="main/img/photo/search-advanced.png"
+                    src="main/img/photo/search-advanced.webp"
                     alt="industrial"
                   />
                 </div>
@@ -388,11 +424,13 @@
               </div>
             </div>
 
-            <div class="search__block search__block--reverse d-fl-wrap">
+            <div
+              class="search__block search__block--reverse d-fl-wrap start__block-animation"
+            >
               <div class="search__block-img">
                 <div class="search-img">
                   <img
-                    src="main/img/photo/search-marking.png"
+                    src="main/img/photo/search-marking.webp"
                     alt="industrial"
                   />
                 </div>
@@ -411,11 +449,11 @@
                 </ul>
               </div>
             </div>
-            <div class="search__block d-fl-wrap">
+            <div class="search__block d-fl-wrap start__block-animation">
               <div class="search__block-img">
                 <div class="search-img">
                   <img
-                    src="main/img/photo/search-ecology.png"
+                    src="main/img/photo/search-ecology.webp"
                     alt="industrial"
                   />
                 </div>
@@ -456,10 +494,12 @@
               </div>
             </div>
 
-            <div class="search__block search__block--reverse d-fl-wrap">
+            <div
+              class="search__block search__block--reverse d-fl-wrap start__block-animation"
+            >
               <div class="search__block-img">
                 <div class="search-img">
-                  <img src="main/img/photo/search-tmk.png" alt="industrial" />
+                  <img src="main/img/photo/search-tmk.webp" alt="industrial" />
                 </div>
                 <h3>
                   Целевые запросы для производственных площадок группы ТМК
@@ -476,42 +516,42 @@
           </div>
         </section>
 
-        <section class="section__stages">
-          <h4 class="title__section">Этапы</h4>
+        <section id="stages" class="section__stages">
+          <h4 class="title__section title-animation">Этапы</h4>
 
           <div class="stages__block-wrapper">
             <div class="stages__block">
-              <div class="stages__card d-fl-col">
+              <div class="stages__card d-fl-col card-animation-1">
                 <div class="stages__img">
                   <img src="main/img/icon/request.png" alt="request" />
                 </div>
                 <h6>Прием <br />заявок</h6>
               </div>
-              <div class="stages__card d-fl-col">
+              <div class="stages__card d-fl-col card-animation-2">
                 <div class="stages__img">
                   <img src="main/img/icon/expertise.png" alt="request" />
                 </div>
                 <h6>Экспертиза</h6>
               </div>
-              <div class="stages__card d-fl-col">
+              <div class="stages__card d-fl-col card-animation-3">
                 <div class="stages__img">
                   <img src="main/img/icon/preparation.png" alt="request" />
                 </div>
                 <h6>Подготовка к пилотному внедрению</h6>
               </div>
-              <div class="stages__card d-fl-col">
+              <div class="stages__card d-fl-col card-animation-4">
                 <div class="stages__img">
                   <img src="main/img/icon/implementation.png" alt="request" />
                 </div>
                 <h6>Пилотное <br />внедрение</h6>
               </div>
-              <div class="stages__card d-fl-col">
+              <div class="stages__card d-fl-col card-animation-5">
                 <div class="stages__img">
                   <img src="main/img/icon/analise.png" alt="request" />
                 </div>
                 <h6>Анализ <br />пилота</h6>
               </div>
-              <div class="stages__card d-fl-col">
+              <div class="stages__card d-fl-col card-animation-6">
                 <div class="stages__img">
                   <img src="main/img/icon/industrial.png" alt="request" />
                 </div>
@@ -521,13 +561,13 @@
           </div>
         </section>
 
-        <section class="section__team">
-          <h4 class="title__section">Команда экспертов</h4>
+        <section id="team" class="section__team">
+          <h4 class="title__section title-animation">Команда экспертов</h4>
 
-          <div class="slider d-fl">
+          <div class="slider title-animation d-fl">
             <div class="slider__item">
               <div class="slider__item-img">
-                <img src="main/img/photo/pishmincev.png" alt="pic" />
+                <img src="main/img/photo/pishmincev.webp" alt="pic" />
               </div>
               <div class="slier__description">
                 <h6>Пышминцев Игорь Юрьевич</h6>
@@ -537,7 +577,7 @@
 
             <div class="slider__item">
               <div class="slider__item-img">
-                <img src="main/img/photo/shadrina.png" alt="pic" />
+                <img src="main/img/photo/shadrina.webp" alt="pic" />
               </div>
               <div class="slier__description">
                 <h6>Шадрина Юлия Викторовна</h6>
@@ -547,7 +587,7 @@
 
             <div class="slider__item">
               <div class="slider__item-img">
-                <img src="main/img/photo/gizatulin.png" alt="pic" />
+                <img src="main/img/photo/gizatulin.webp" alt="pic" />
               </div>
               <div class="slier__description">
                 <h6>Гизатуллин Антон Бильгуварович</h6>
@@ -557,7 +597,7 @@
 
             <div class="slider__item">
               <div class="slider__item-img">
-                <img src="main/img/photo/illina.png" alt="pic" />
+                <img src="main/img/photo/illina.webp" alt="pic" />
               </div>
               <div class="slier__description">
                 <h6>Ильина Мария Вадимовна</h6>
@@ -570,7 +610,7 @@
 
             <div class="slider__item">
               <div class="slider__item-img">
-                <img src="main/img/photo/arsenkin.png" alt="pic" />
+                <img src="main/img/photo/arsenkin.webp" alt="pic" />
               </div>
               <div class="slier__description">
                 <h6>Арсенкин Александр Михайлович</h6>
@@ -583,7 +623,7 @@
 
             <div class="slider__item">
               <div class="slider__item-img">
-                <img src="main/img/photo/prikina.png" alt="pic" />
+                <img src="main/img/photo/prikina.webp" alt="pic" />
               </div>
               <div class="slier__description">
                 <h6>Прыкина Юлия Вячеславовна</h6>
@@ -596,7 +636,7 @@
 
             <div class="slider__item">
               <div class="slider__item-img">
-                <img src="main/img/photo/shkuratov.png" alt="pic" />
+                <img src="main/img/photo/shkuratov.webp" alt="pic" />
               </div>
               <div class="slier__description">
                 <h6>Шкуратов Евгений Александрович</h6>
@@ -606,7 +646,7 @@
 
             <div class="slider__item">
               <div class="slider__item-img">
-                <img src="main/img/photo/mihaylova.png" alt="pic" />
+                <img src="main/img/photo/mihaylova.webp" alt="pic" />
               </div>
               <div class="slier__description">
                 <h6>Михайлова Елена Николаевна</h6>
@@ -615,7 +655,7 @@
             </div>
             <div class="slider__item">
               <div class="slider__item-img">
-                <img src="main/img/photo/podgornih.png" alt="pic" />
+                <img src="main/img/photo/podgornih.webp" alt="pic" />
               </div>
               <div class="slier__description">
                 <h6>Подгорных Елена Владимировна</h6>
@@ -627,7 +667,7 @@
             </div>
             <div class="slider__item">
               <div class="slider__item-img">
-                <img src="main/img/photo/lunev.png" alt="pic" />
+                <img src="main/img/photo/lunev.webp" alt="pic" />
               </div>
               <div class="slier__description">
                 <h6>Лунев Александр Алексеевич</h6>
@@ -639,7 +679,7 @@
             </div>
             <div class="slider__item">
               <div class="slider__item-img">
-                <img src="main/img/photo/pasuta.png" alt="pic" />
+                <img src="main/img/photo/pasuta.webp" alt="pic" />
               </div>
               <div class="slier__description">
                 <h6>Пасюта Антон Павлович</h6>
@@ -648,7 +688,7 @@
             </div>
             <div class="slider__item">
               <div class="slider__item-img">
-                <img src="main/img/photo/kormilcev.png" alt="pic" />
+                <img src="main/img/photo/kormilcev.webp" alt="pic" />
               </div>
               <div class="slier__description">
                 <h6>Кормильцев Алексей Владимирович</h6>
@@ -660,13 +700,17 @@
             </div>
           </div>
 
-          <p>Наши эксперты готовы принять любой вызов</p>
+          <!-- <p>Наши эксперты готовы принять любой вызов</p> -->
         </section>
 
         <section id="feedback" class="section__request">
           <div class="request__title d-fl"><span>Заявка</span></div>
 
-          <form action="/send.php" method="POST" class="request__form">
+          <form
+            action="/send.php"
+            method="POST"
+            class="request__form start__block-animation"
+          >
             <p class="form__info-description">
               обязательные для заполнения поля
             </p>
@@ -797,8 +841,7 @@
                   placeholder=" "
                 />
                 <label class="label__form" for="busines"
-                  >Краткое описание потенциального эффекта для бизнеса ТМК при
-                  внедрении решения/продукта</label
+                  >Краткое описание потенциального эффекта</label
                 >
               </div>
             </div>
@@ -873,11 +916,11 @@
           </form>
         </section>
 
-        <section class="section__question">
-          <h4 class="title__section">Частые вопросы</h4>
+        <section id="questions" class="section__question">
+          <h4 class="title__section title-animation">Частые вопросы</h4>
 
           <article class="arcticle__question d-fl-col">
-            <div class="question__block">
+            <div class="question__block about__paragraph-animation-left">
               <h3>
                 Должен ли я передать интеллектуальные права по завершение
                 акселерационной программы?
@@ -890,7 +933,7 @@
               </p>
             </div>
 
-            <div class="question__block">
+            <div class="question__block about__paragraph-animation-right">
               <h3>
                 Должен ли я делиться конфиденциальной информацией о проекте?
               </h3>
@@ -900,7 +943,7 @@
               </p>
             </div>
 
-            <div class="question__block">
+            <div class="question__block about__paragraph-animation-left">
               <h3>Могут ли физические лица участвовать в программе?</h3>
               <p>
                 Подать заявку на участие можно как физическому лицу, так и
@@ -909,7 +952,7 @@
               </p>
             </div>
 
-            <div class="question__block">
+            <div class="question__block about__paragraph-animation-right">
               <h3>Могу ли я подать несколько заявок?</h3>
               <p>
                 Да. Каждый участник может подать неограниченное количество
@@ -923,29 +966,37 @@
           <h4 class="partners__title">Партнеры</h4>
 
           <div class="partners__block d-fl">
-            <div class="partners__block-img">
-              <img src="main/img/icon/partners-1.png" alt="partners" />
+            <div class="partners__block-img slider-animation-1">
+              <svg>
+                <use xlink:href="main/sprite/icon.svg#partners-1"></use>
+              </svg>
             </div>
-            <div class="partners__block-img">
-              <img src="main/img/icon/partners-2.png" alt="partners" />
+            <div class="partners__block-img slider-animation-2">
+              <svg>
+                <use xlink:href="main/sprite/icon.svg#partners-2"></use>
+              </svg>
             </div>
-            <div class="partners__block-img">
-              <img src="main/img/icon/partners-3.png" alt="partners" />
+            <div class="partners__block-img slider-animation-3">
+              <svg>
+                <use xlink:href="main/sprite/icon.svg#partners-3"></use>
+              </svg>
             </div>
-            <div class="partners__block-img">
-              <img src="main/img/icon/partners-4.png" alt="partners" />
+            <div class="partners__block-img slider-animation-4">
+              <svg>
+                <use xlink:href="main/sprite/icon.svg#partners-4"></use>
+              </svg>
             </div>
           </div>
         </section>
 
-        <section class="section__news">
+        <section id="news" class="section__news">
           <h4 class="title__section">Новости</h4>
 
-          <div class="news__block-grid">
+          <div class="news__block-grid start__block-animation">
             <article class="news__card">
               <a href="https://www.tmk-group.ru/">
                 <div class="news__card-img">
-                  <img src="main/img/photo/newsCard-1.png" alt="news__card" />
+                  <img src="main/img/photo/newsCard-1.webp" alt="news__card" />
                 </div>
                 <span>17.03.21</span>
                 <h6>
@@ -958,7 +1009,7 @@
             <article class="news__card">
               <a href="https://www.tmk-group.ru/">
                 <div class="news__card-img">
-                  <img src="main/img/photo/newsCard-2.png" alt="news__card" />
+                  <img src="main/img/photo/newsCard-2.webp" alt="news__card" />
                 </div>
                 <span>17.03.21</span>
                 <h6>
@@ -971,7 +1022,7 @@
             <article class="news__card">
               <a href="https://www.tmk-group.ru/">
                 <div class="news__card-img">
-                  <img src="main/img/photo/newsCard-3.png" alt="news__card" />
+                  <img src="main/img/photo/newsCard-3.webp" alt="news__card" />
                 </div>
                 <span>06.05.21</span>
                 <h6>
@@ -992,11 +1043,19 @@
         </section>
 
         <div class="scroll__btn d-fl-col js-back__top">
-          <a class="start__btn">К началу</a>
+          <a href="#header" class="start__btn">К началу</a>
         </div>
 
         <section class="section__info">
-          <video preload="auto" autoplay muted loop class="start__video">
+          <video
+            poster="main/img/background/info.webp"
+            preload="auto"
+            autoplay
+            muted
+            loop
+            class="start__video"
+          >
+            <source type="video/webm" src="main/video/TMK-R&D-03-Film.webm" />
             <source type="video/mp4" src="main/video/TMK-R&D-03-Film.mp4" />
           </video>
           <div class="start__video-back"></div>
@@ -1006,9 +1065,20 @@
       <footer class="footer d-fl-col">
         <div class="footer-top d-fl">
           <a href="/" class="header__logo">
-            <img src="main/img/icon/tmkLogo.svg" alt="logo" />
+            <svg>
+              <use xlink:href="main/sprite/icon.svg#icon-logo"></use>
+            </svg>
           </a>
+          <div class="header__mobile-btn">
+            <span></span>
+            <span></span>
+          </div>
           <div class="header-right d-fl">
+            <div class="header__mobile-btn-close">
+              <span></span>
+              <span></span>
+            </div>
+
             <nav class="header__nav d-fl-col">
               <ul class="d-fl">
                 <li><a href="/">О нас</a></li>
@@ -1035,7 +1105,7 @@
               <a href="/">innovations@tmk-group.com</a>
             </div>
 
-            <a href="/" class="request__btn btn__animation-orange"
+            <a href="#feedback" class="request__btn btn__animation-orange"
               >Подать заявку</a
             >
           </div>
