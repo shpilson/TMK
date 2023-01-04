@@ -1941,9 +1941,6 @@ $fontArial: "Arial", "sans-serif";
 }
 
 .news__btn-more {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
   font-family: $fontArial;
   font-weight: 400;
   font-size: clamp(rem(16), 1.04vw, rem(20));
@@ -1951,12 +1948,12 @@ $fontArial: "Arial", "sans-serif";
   color: #1e1e1e;
   padding: clamp(rem(15), 1.04vw, rem(20)) clamp(rem(20), 1.56vw, rem(30));
   border: rem(2) solid #6b6b6b;
-  margin-left: adaptiv-num-rem(-50, -70, 1920, 360);
   transition: 0.3s;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
+  align-self: center;
 
   &:hover {
     border-color: $colorOrange;

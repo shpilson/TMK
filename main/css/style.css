@@ -1947,9 +1947,6 @@ html {
 }
 
 .news__btn-more {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
   font-family: "Arial", "sans-serif";
   font-weight: 400;
   font-size: clamp(1rem, 1.04vw, 1.25rem);
@@ -1957,15 +1954,12 @@ html {
   color: #1e1e1e;
   padding: clamp(0.9375rem, 1.04vw, 1.25rem) clamp(1.25rem, 1.56vw, 1.875rem);
   border: 0.125rem solid #6b6b6b;
-  margin-left: calc(
-    -3.125rem + (-70 - -50) * ((100vw - 360px) /
-          (1920 - 360))
-  );
   transition: 0.3s;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
+  align-self: center;
 }
 .news__btn-more:hover {
   border-color: #dd6f2d;
