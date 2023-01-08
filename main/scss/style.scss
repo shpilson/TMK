@@ -88,9 +88,48 @@ $fontArial: "Arial", "sans-serif";
   display: none;
   font-family: $fontArial;
   font-weight: 400;
-  font-size: rem(24);
-  line-height: rem(28);
+  font-size: clamp(rem(16), 1.25vw, rem(24));
+  line-height: clamp(rem(20), 1.46vw, rem(28));
   color: $colorOrange;
+  position: relative;
+
+  @media (max-width: 940px) {
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: rem(-5);
+    display: block;
+    width: 0;
+    height: rem(2);
+    background-color: $colorOrange;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+  }
+
+  &::after {
+    left: 50%;
+  }
+
+  &::before {
+    right: 50%;
+  }
+
+  &:hover {
+    color: $colorOrange;
+
+    &::after,
+    &::before {
+      width: 50%;
+    }
+  }
 }
 
 .request__btn {
@@ -319,6 +358,59 @@ $fontArial: "Arial", "sans-serif";
   padding: clamp(rem(20), 2.08vw, rem(40)) clamp(rem(15), 3.65vw, rem(70));
   gap: clamp(rem(15), 1.04vw, rem(20));
   align-items: center;
+  transition: 0.15s;
+  -webkit-transition: 0.15s;
+  -moz-transition: 0.15s;
+  -ms-transition: 0.15s;
+  -o-transition: 0.15s;
+
+  &-scrolled {
+    position: fixed;
+    background-color: #e4e4e4;
+    padding: rem(10) clamp(rem(15), 3.65vw, rem(70));
+
+    @media (max-width: 940px) {
+      background-color: #000000;
+    }
+
+    & > .header__logo {
+      padding: 0;
+      width: rem(55);
+      height: rem(55);
+
+      svg {
+        fill: #000000;
+
+        @media (max-width: 940px) {
+          fill: #ffffff;
+        }
+      }
+    }
+
+    & > .header-right {
+      align-self: center;
+    }
+
+    & > .header-right ul li a {
+      color: #000000;
+    }
+
+    & > .header-right .header__line {
+      display: none;
+    }
+
+    & > .header__btn > .accelerator__btn {
+      display: none;
+    }
+
+    & > .header__btn {
+      align-self: center;
+    }
+
+    & > .header__btn > .request__link {
+      display: block;
+    }
+  }
 }
 .d-fl {
 }
@@ -719,8 +811,8 @@ $fontArial: "Arial", "sans-serif";
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding: clamp(rem(65), 19.27vw, rem(370)) clamp(rem(28), 12.5vw, rem(240))
-    clamp(rem(30), 10.94vw, rem(210)) clamp(rem(28), 14.58vw, rem(280));
+  padding: clamp(rem(55), 7.81vw, rem(150)) clamp(rem(28), 12.5vw, rem(240))
+    clamp(rem(55), 7.81vw, rem(150)) clamp(rem(28), 14.58vw, rem(280));
   gap: clamp(rem(55), 5.73vw, rem(110));
 }
 
@@ -928,6 +1020,10 @@ $fontArial: "Arial", "sans-serif";
   @media (max-width: 780px) {
     gap: clamp(rem(30), 8.33vw, rem(65));
   }
+
+  &:nth-child(even) > .search__block-img {
+    box-shadow: rem(-4) rem(4) rem(4) rem(2) rgba(0, 0, 0, 0.3);
+  }
 }
 
 .search__block--reverse {
@@ -984,6 +1080,55 @@ $fontArial: "Arial", "sans-serif";
 
   @media (max-width: 780px) {
     max-width: 100%;
+  }
+
+  &:hover {
+    animation: myAnim 2s ease 0s 1 normal forwards;
+    -webkit-animation: myAnim 2s ease 0s 1 normal forwards;
+  }
+}
+
+@keyframes myAnim {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translateX(-3px);
+    -webkit-transform: translateX(-3px);
+    -moz-transform: translateX(-3px);
+    -ms-transform: translateX(-3px);
+    -o-transform: translateX(-3px);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: translateX(3px);
+    -webkit-transform: translateX(3px);
+    -moz-transform: translateX(3px);
+    -ms-transform: translateX(3px);
+    -o-transform: translateX(3px);
+  }
+
+  80% {
+    transform: translateX(2px);
+    -webkit-transform: translateX(2px);
+    -moz-transform: translateX(2px);
+    -ms-transform: translateX(2px);
+    -o-transform: translateX(2px);
+  }
+
+  90% {
+    transform: translateX(-2px);
+    -webkit-transform: translateX(-2px);
+    -moz-transform: translateX(-2px);
+    -ms-transform: translateX(-2px);
+    -o-transform: translateX(-2px);
   }
 }
 
@@ -1244,7 +1389,6 @@ $fontArial: "Arial", "sans-serif";
     border: rem(2) solid $colorOrange;
 
     img {
-      margin: rem(10);
       position: absolute;
       top: 0;
       right: 0;
@@ -1444,6 +1588,10 @@ $fontArial: "Arial", "sans-serif";
     & > .label__form {
       width: 100%;
       text-align: center;
+
+      @media (max-width: 940px) {
+        text-align: left;
+      }
     }
 
     @media (max-width: 850px) {
@@ -2033,8 +2181,10 @@ $fontArial: "Arial", "sans-serif";
   position: relative;
   gap: rem(30);
 
-  @media (max-width: 600px) {
+  @media (max-width: 730px) {
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 
   &-left {

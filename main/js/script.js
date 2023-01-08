@@ -31,7 +31,6 @@ const slider = () => {
     });
   });
 };
-
 slider();
 
 const labelRequired = () => {
@@ -70,12 +69,8 @@ const menu = () => {
     phoneBodyScroll.style.overflow = "hidden";
   }
 
-  const headerLink = document.querySelectorAll(".header__nav-link");
-  const menuBtnClose = document.querySelectorAll(".header__mobile-btn--close");
+  const menuBtnClose = document.querySelectorAll(".menu__close");
 
-  headerLink.forEach((element) => {
-    element.addEventListener("click", closeMenu);
-  });
   menuBtnClose.forEach((element) => {
     element.addEventListener("click", closeMenu);
   });
@@ -90,6 +85,15 @@ const menu = () => {
   }
 };
 menu();
+
+const menuScrolled = () => {
+  if (window.scrollY > 100) {
+    document.querySelector("#header").classList.add("header-scrolled");
+  } else {
+    document.querySelector("#header").classList.remove("header-scrolled");
+  }
+};
+window.addEventListener("scroll", menuScrolled);
 
 const animation = () => {
   function onEntry(entry) {
@@ -180,3 +184,30 @@ const animation = () => {
   }
 };
 animation();
+
+$(function () {
+  document.getElementById("ajax-contact-form").addEventListener(
+    "submit",
+    function (evt) {
+      var http = new XMLHttpRequest(),
+        f = this;
+      var th = $(this);
+      evt.preventDefault();
+      http.open("POST", "contact.php", true);
+      http.onreadystatechange = function () {
+        if (http.readyState == 4 && http.status == 200) {
+          alert(http.responseText);
+          if (http.responseText.indexOf(f.nameFF.value) == 0) {
+            // очистить поля формы, если в ответе первым словом будет имя отправителя (nameFF)
+            th.trigger("reset");
+          }
+        }
+      };
+      http.onerror = function () {
+        alert("Ошибка, попробуйте еще раз");
+      };
+      http.send(new FormData(f));
+    },
+    false
+  );
+});
