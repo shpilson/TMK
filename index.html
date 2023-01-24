@@ -25,7 +25,7 @@
     <meta property="og:image" content="https://innovations.tmk-group.ru/" />
     <link rel="canonical" href="https://innovations.tmk-group.ru/" />
 
-    <link rel="stylesheet" type="text/css" href="main/css/style.css?v=20" />
+    <link rel="stylesheet" type="text/css" href="main/css/style.css?v=23" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="/favicon.ico" />
 
@@ -35,13 +35,20 @@
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
 
-    <script src="main/js/script.js?v=20" defer></script>
+    <script src="main/js/script.js?v=23" defer></script>
   </head>
 
   <body id="phone__menu-id-body">
+    <div class="preloader">
+      <div class="ring">
+        <div style="line-height: 21px; padding-top: 55px">Checking browser</div>
+        <span class="preloader__rotate"></span>
+      </div>
+    </div>
+
     <div class="wrapper">
       <header id="header" class="header d-fl">
-        <a href="/" class="header__logo">
+        <a href="https://www.tmk-group.ru/cap.html" class="header__logo">
           <svg>
             <use xlink:href="main/sprite/icon.svg#icon-logo"></use>
           </svg>
@@ -216,7 +223,7 @@
               </div>
 
               <div class="about__info-right">
-                <img src="main/img/photo/about.webp" alt="about" />
+                <img src="" alt="about" data="main/img/photo/about.webp" />
               </div>
             </div>
           </div>
@@ -230,7 +237,11 @@
               class="offers__description-block d-fl about__paragraph-animation-left"
             >
               <div class="offers__description-block--img">
-                <img src="main/img/icon/offers-review.png" alt="offers" />
+                <img
+                  src=""
+                  alt="offers"
+                  data="main/img/icon/offers-review.png"
+                />
               </div>
               <p>
                 Рекомендации от ведущих экспертов компании, неограниченный
@@ -241,12 +252,24 @@
               class="offers__description-block d-fl about__paragraph-animation-right"
             >
               <div class="offers__description-block--img">
-                <img src="main/img/icon/offers-idea.png" alt="offers" />
+                <img src="" alt="offers" data="main/img/icon/offers-idea.png" />
               </div>
               <p>
                 Возможность пилотирования решений на производственных площадках
                 ТМК
               </p>
+            </div>
+            <div
+              class="offers__description-block d-fl about__paragraph-animation-left"
+            >
+              <div class="offers__description-block--img">
+                <img
+                  src=""
+                  alt="offers"
+                  data="main/img/icon/offers-technology.svg"
+                />
+              </div>
+              <p>Возможность оплаты пилотного опробования технологии</p>
             </div>
           </div>
         </section>
@@ -338,8 +361,9 @@
               <div class="search__block-img">
                 <div class="search-img">
                   <img
-                    src="main/img/photo/search-industrial.webp"
+                    src=""
                     alt="industrial"
+                    data="main/img/photo/search-industrial.webp"
                   />
                 </div>
                 <h3>Новые производственные технологии</h3>
@@ -376,8 +400,9 @@
               <div class="search__block-img">
                 <div class="search-img">
                   <img
-                    src="main/img/photo/search-technology.webp"
+                    src=""
                     alt="industrial"
+                    data="main/img/photo/search-technology.webp"
                   />
                 </div>
                 <h3>Новые материалы и технологии нанесения покрытий</h3>
@@ -407,8 +432,9 @@
               <div class="search__block-img">
                 <div class="search-img">
                   <img
-                    src="main/img/photo/search-advanced.webp"
+                    src=""
                     alt="industrial"
+                    data="main/img/photo/search-advanced.webp"
                   />
                 </div>
                 <h3>Передовые решения для трубной промышленности</h3>
@@ -436,8 +462,9 @@
               <div class="search__block-img">
                 <div class="search-img">
                   <img
-                    src="main/img/photo/search-marking.webp"
+                    src=""
                     alt="industrial"
+                    data="main/img/photo/search-marking.webp"
                   />
                 </div>
                 <h3>Сквозной контроль качества и маркировка продукции</h3>
@@ -459,8 +486,9 @@
               <div class="search__block-img">
                 <div class="search-img">
                   <img
-                    src="main/img/photo/search-ecology.webp"
+                    src=""
                     alt="industrial"
+                    data="main/img/photo/search-ecology.webp"
                   />
                 </div>
                 <h3>
@@ -505,7 +533,11 @@
             >
               <div class="search__block-img">
                 <div class="search-img">
-                  <img src="main/img/photo/search-tmk.webp" alt="industrial" />
+                  <img
+                    src=""
+                    alt="industrial"
+                    data="main/img/photo/search-tmk.webp"
+                  />
                 </div>
                 <h3>
                   Целевые запросы для производственных площадок группы ТМК
@@ -529,37 +561,53 @@
             <div class="stages__block">
               <div class="stages__card d-fl-col card-animation-1">
                 <div class="stages__img">
-                  <img src="main/img/icon/request.png" alt="request" />
+                  <img src="" alt="request" data="main/img/icon/request.png" />
                 </div>
                 <h6>Прием <br />заявок</h6>
               </div>
               <div class="stages__card d-fl-col card-animation-2">
                 <div class="stages__img">
-                  <img src="main/img/icon/expertise.png" alt="request" />
+                  <img
+                    src=""
+                    alt="request"
+                    data="main/img/icon/expertise.png"
+                  />
                 </div>
                 <h6>Экспертиза</h6>
               </div>
               <div class="stages__card d-fl-col card-animation-3">
                 <div class="stages__img">
-                  <img src="main/img/icon/preparation.png" alt="request" />
+                  <img
+                    src=""
+                    alt="request"
+                    data="main/img/icon/preparation.png"
+                  />
                 </div>
                 <h6>Подготовка к пилотному внедрению</h6>
               </div>
               <div class="stages__card d-fl-col card-animation-4">
                 <div class="stages__img">
-                  <img src="main/img/icon/implementation.png" alt="request" />
+                  <img
+                    src=""
+                    alt="request"
+                    data="main/img/icon/implementation.png"
+                  />
                 </div>
                 <h6>Пилотное <br />внедрение</h6>
               </div>
               <div class="stages__card d-fl-col card-animation-5">
                 <div class="stages__img">
-                  <img src="main/img/icon/analise.png" alt="request" />
+                  <img src="" alt="request" data="main/img/icon/analise.png" />
                 </div>
                 <h6>Анализ <br />пилота</h6>
               </div>
               <div class="stages__card d-fl-col card-animation-6">
                 <div class="stages__img">
-                  <img src="main/img/icon/industrial.png" alt="request" />
+                  <img
+                    src=""
+                    alt="request"
+                    data="main/img/icon/industrial.png"
+                  />
                 </div>
                 <h6>Промышленное внедрение</h6>
               </div>
@@ -573,7 +621,7 @@
           <div class="slider title-animation d-fl">
             <div class="slider__item">
               <div class="slider__item-img">
-                <img src="main/img/photo/pishmincev.webp" alt="pic" />
+                <img src="" alt="pic" data="main/img/photo/pishmincev.webp" />
               </div>
               <div class="slier__description">
                 <h6>Пышминцев Игорь Юрьевич</h6>
@@ -583,7 +631,7 @@
 
             <div class="slider__item">
               <div class="slider__item-img">
-                <img src="main/img/photo/shadrina.webp" alt="pic" />
+                <img src="" alt="pic" data="main/img/photo/shadrina.webp" />
               </div>
               <div class="slier__description">
                 <h6>Шадрина Юлия Викторовна</h6>
@@ -593,7 +641,7 @@
 
             <div class="slider__item">
               <div class="slider__item-img">
-                <img src="main/img/photo/gizatulin.webp" alt="pic" />
+                <img src="" alt="pic" data="main/img/photo/gizatulin.webp" />
               </div>
               <div class="slier__description">
                 <h6>Гизатуллин Антон Бильгуварович</h6>
@@ -603,7 +651,7 @@
 
             <div class="slider__item">
               <div class="slider__item-img">
-                <img src="main/img/photo/illina.webp" alt="pic" />
+                <img src="" alt="pic" data="main/img/photo/illina.webp" />
               </div>
               <div class="slier__description">
                 <h6>Ильина Мария Вадимовна</h6>
@@ -616,7 +664,7 @@
 
             <div class="slider__item">
               <div class="slider__item-img">
-                <img src="main/img/photo/arsenkin.webp" alt="pic" />
+                <img src="" alt="pic" data="main/img/photo/arsenkin.webp" />
               </div>
               <div class="slier__description">
                 <h6>Арсенкин Александр Михайлович</h6>
@@ -629,7 +677,7 @@
 
             <div class="slider__item">
               <div class="slider__item-img">
-                <img src="main/img/photo/prikina.webp" alt="pic" />
+                <img src="" alt="pic" data="main/img/photo/prikina.webp" />
               </div>
               <div class="slier__description">
                 <h6>Прыкина Юлия Вячеславовна</h6>
@@ -642,7 +690,7 @@
 
             <div class="slider__item">
               <div class="slider__item-img">
-                <img src="main/img/photo/shkuratov.webp" alt="pic" />
+                <img src="" alt="pic" data="main/img/photo/shkuratov.webp" />
               </div>
               <div class="slier__description">
                 <h6>Шкуратов Евгений Александрович</h6>
@@ -652,7 +700,7 @@
 
             <div class="slider__item">
               <div class="slider__item-img">
-                <img src="main/img/photo/mihaylova.webp" alt="pic" />
+                <img src="" alt="pic" data="main/img/photo/mihaylova.webp" />
               </div>
               <div class="slier__description">
                 <h6>Михайлова Елена Николаевна</h6>
@@ -661,7 +709,7 @@
             </div>
             <div class="slider__item">
               <div class="slider__item-img">
-                <img src="main/img/photo/podgornih.webp" alt="pic" />
+                <img src="" alt="pic" data="main/img/photo/podgornih.webp" />
               </div>
               <div class="slier__description">
                 <h6>Подгорных Елена Владимировна</h6>
@@ -673,7 +721,7 @@
             </div>
             <div class="slider__item">
               <div class="slider__item-img">
-                <img src="main/img/photo/lunev.webp" alt="pic" />
+                <img src="" alt="pic" data="main/img/photo/lunev.webp" />
               </div>
               <div class="slier__description">
                 <h6>Лунев Александр Алексеевич</h6>
@@ -685,7 +733,7 @@
             </div>
             <div class="slider__item">
               <div class="slider__item-img">
-                <img src="main/img/photo/pasuta.webp" alt="pic" />
+                <img src="" alt="pic" data="main/img/photo/pasuta.webp" />
               </div>
               <div class="slier__description">
                 <h6>Пасюта Антон Павлович</h6>
@@ -694,7 +742,7 @@
             </div>
             <div class="slider__item">
               <div class="slider__item-img">
-                <img src="main/img/photo/kormilcev.webp" alt="pic" />
+                <img src="" alt="pic" data="main/img/photo/kormilcev.webp" />
               </div>
               <div class="slier__description">
                 <h6>Кормильцев Алексей Владимирович</h6>
@@ -811,7 +859,7 @@
               </div>
 
               <div class="request__form-flex d-fl-wrap">
-                <div class="input__item">
+                <!-- <div class="input__item">
                   <input
                     class="input__form"
                     type="text"
@@ -822,6 +870,20 @@
                   />
                   <label class="label__form" for="investmentsFF"
                     >Потребность в инвестициях (руб.)</label
+                  >
+                </div> -->
+
+                <div class="input__item">
+                  <input
+                    class="input__form"
+                    type="text"
+                    name="businesFF"
+                    id="businesFF"
+                    autocomplete="off"
+                    placeholder=" "
+                  />
+                  <label class="label__form" for="businesFF"
+                    >Описание потенциального эффекта</label
                   >
                 </div>
 
@@ -840,7 +902,7 @@
                 </div>
               </div>
 
-              <div class="input__item-last">
+              <!-- <div class="input__item-last">
                 <input
                   class="input__form"
                   type="text"
@@ -852,11 +914,11 @@
                 <label class="label__form" for="businesFF"
                   >Описание потенциального эффекта</label
                 >
-              </div>
+              </div> -->
             </div>
 
             <div class="form__btn d-fl-wrap">
-              <div class="download__template d-fl">
+              <!-- <div class="download__template d-fl">
                 <a
                   class="download__btn btn__animation-orange"
                   href="main/download/template/template.rar"
@@ -868,7 +930,7 @@
                     <use xlink:href="main/sprite/icon.svg#download-svg"></use>
                   </svg>
                 </div>
-              </div>
+              </div> -->
 
               <div class="input__file-wrapper d-fl-col">
                 <span class="input__file-description"
@@ -1007,7 +1069,11 @@
             <article class="news__card">
               <a href="https://www.tmk-group.ru/">
                 <div class="news__card-img">
-                  <img src="main/img/photo/newsCard-1.webp" alt="news__card" />
+                  <img
+                    src="main/img/photo/newsCard-1.webp"
+                    alt="news__card"
+                    data="main/img/photo/newsCard-1.webp"
+                  />
                 </div>
                 <span>17.03.21</span>
                 <h6>
@@ -1020,7 +1086,11 @@
             <article class="news__card">
               <a href="https://www.tmk-group.ru/">
                 <div class="news__card-img">
-                  <img src="main/img/photo/newsCard-2.webp" alt="news__card" />
+                  <img
+                    src=""
+                    alt="news__card"
+                    data="main/img/photo/newsCard-2.webp"
+                  />
                 </div>
                 <span>17.03.21</span>
                 <h6>
@@ -1033,7 +1103,11 @@
             <article class="news__card">
               <a href="https://www.tmk-group.ru/">
                 <div class="news__card-img">
-                  <img src="main/img/photo/newsCard-3.webp" alt="news__card" />
+                  <img
+                    src=""
+                    alt="news__card"
+                    data="main/img/photo/newsCard-3.webp"
+                  />
                 </div>
                 <span>06.05.21</span>
                 <h6>
@@ -1074,7 +1148,7 @@
 
       <footer class="footer d-fl-col">
         <div class="footer-top d-fl">
-          <a href="/" class="header__logo">
+          <a href="#section__start" class="header__logo">
             <svg>
               <use xlink:href="main/sprite/icon.svg#icon-logo"></use>
             </svg>
