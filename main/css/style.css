@@ -1227,78 +1227,7 @@ html {
     max-width: 100%;
   }
 }
-.search__block-img:hover {
-  animation: myAnim 2s ease 0s 1 normal forwards;
-  -webkit-animation: myAnim 2s ease 0s 1 normal forwards;
-}
 
-@-webkit-keyframes myAnim {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  10%, 30%, 50%, 70% {
-    transform: translateX(-3px);
-    -webkit-transform: translateX(-3px);
-    -moz-transform: translateX(-3px);
-    -ms-transform: translateX(-3px);
-    -o-transform: translateX(-3px);
-  }
-  20%, 40%, 60% {
-    transform: translateX(3px);
-    -webkit-transform: translateX(3px);
-    -moz-transform: translateX(3px);
-    -ms-transform: translateX(3px);
-    -o-transform: translateX(3px);
-  }
-  80% {
-    transform: translateX(2px);
-    -webkit-transform: translateX(2px);
-    -moz-transform: translateX(2px);
-    -ms-transform: translateX(2px);
-    -o-transform: translateX(2px);
-  }
-  90% {
-    transform: translateX(-2px);
-    -webkit-transform: translateX(-2px);
-    -moz-transform: translateX(-2px);
-    -ms-transform: translateX(-2px);
-    -o-transform: translateX(-2px);
-  }
-}
-
-@keyframes myAnim {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  10%, 30%, 50%, 70% {
-    transform: translateX(-3px);
-    -webkit-transform: translateX(-3px);
-    -moz-transform: translateX(-3px);
-    -ms-transform: translateX(-3px);
-    -o-transform: translateX(-3px);
-  }
-  20%, 40%, 60% {
-    transform: translateX(3px);
-    -webkit-transform: translateX(3px);
-    -moz-transform: translateX(3px);
-    -ms-transform: translateX(3px);
-    -o-transform: translateX(3px);
-  }
-  80% {
-    transform: translateX(2px);
-    -webkit-transform: translateX(2px);
-    -moz-transform: translateX(2px);
-    -ms-transform: translateX(2px);
-    -o-transform: translateX(2px);
-  }
-  90% {
-    transform: translateX(-2px);
-    -webkit-transform: translateX(-2px);
-    -moz-transform: translateX(-2px);
-    -ms-transform: translateX(-2px);
-    -o-transform: translateX(-2px);
-  }
-}
 .search-img {
   max-width: 35.625rem;
   max-height: 37.5rem;
@@ -1515,7 +1444,7 @@ html {
 /*------------------STAGES------------------*/
 /*------------------TEAM------------------*/
 .section__team {
-  padding: 4.375rem 0 4.375rem 0;
+  padding: 4.375rem 0 clamp(0.625rem, 3.65vw, 4.375rem) 0;
 }
 .section__team p {
   font-family: "Arial", "sans-serif";
@@ -1528,7 +1457,7 @@ html {
 
 /*------------------SLIDER------------------*/
 .slider {
-  padding: 0 clamp(5rem, 13.54vw, 16.25rem) clamp(1.5625rem, 5.47vw, 6.5625rem) clamp(1.5625rem, 3.13vw, 3.75rem);
+  padding: 0 clamp(5rem, 13.54vw, 16.25rem) clamp(1.5625rem, 3.13vw, 3.75rem) clamp(1.5625rem, 3.13vw, 3.75rem);
   margin-top: clamp(2.8125rem, 8.85vw, 10.625rem);
   gap: 4.0625rem;
 }
@@ -1692,10 +1621,10 @@ html {
 }
 
 .request__form {
-  padding: 0 clamp(1.5625rem, 10.42vw, 12.5rem);
+  padding: 0 clamp(0.625rem, 10.42vw, 12.5rem);
 }
 .request__form p {
-  padding: clamp(1.5625rem, 7.29vw, 8.75rem) 0 5rem 0;
+  padding: 1.5625rem 0 5rem 0;
   font-family: "Arial", "sans-serif";
   font-weight: 400;
   font-size: clamp(1rem, 1.25vw, 1.5rem);
@@ -2175,7 +2104,7 @@ html {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
   gap: 1.5625rem;
-  padding: 4.6875rem clamp(1.5625rem, 2.6vw, 3.125rem) clamp(6.875rem, 7.03vw, 8.4375rem) clamp(1.5625rem, 2.6vw, 3.125rem);
+  padding: 4.6875rem clamp(1.5625rem, 2.6vw, 3.125rem) clamp(3.125rem, 7.03vw, 8.4375rem) clamp(1.5625rem, 2.6vw, 3.125rem);
 }
 
 .news__card {
