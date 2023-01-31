@@ -773,7 +773,14 @@ $fontArial: "Arial", "sans-serif";
 /*------------------START------------------*/
 /*------------------ABOUT------------------*/
 .section__about {
+  position: relative;
   padding: rem(60) 0 clamp(rem(45), 6.25vw, rem(120)) 0;
+}
+
+#about {
+  position: absolute;
+  top: rem(-60);
+  left: 0;
 }
 
 .paragraph__about-wrapper {
@@ -900,15 +907,23 @@ $fontArial: "Arial", "sans-serif";
 /*------------------ABOUT------------------*/
 /*------------------OFFERS------------------*/
 .section__offers {
+  position: relative;
 }
+
+#offer {
+  position: absolute;
+  top: rem(-130);
+  left: 0;
+}
+
 .offers__description {
   margin-top: rem(75);
   background-image: url("../../main/img/background/offers.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding: clamp(rem(55), 7.81vw, rem(150)) clamp(rem(28), 12.5vw, rem(240))
-    clamp(rem(55), 7.81vw, rem(150)) clamp(rem(28), 14.58vw, rem(280));
+  padding: clamp(rem(55), 7.81vw, rem(150)) adaptiv-num-rem(28, 240, 1920, 360)
+    clamp(rem(55), 7.81vw, rem(150)) adaptiv-num-rem(28, 240, 1920, 360);
   gap: clamp(rem(55), 5.73vw, rem(110));
 }
 
@@ -974,8 +989,16 @@ $fontArial: "Arial", "sans-serif";
 
 /*------------------CONDITIONS------------------*/
 .section__conditions {
+  position: relative;
   padding: clamp(rem(30), 7.29vw, rem(140)) 0 clamp(rem(50), 7.29vw, rem(190)) 0;
 }
+
+#conditions {
+  position: absolute;
+  top: adaptiv-num-rem(-60, -5, 1920, 360);
+  left: 0;
+}
+
 .conditions__card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(rem(200), 1fr));
@@ -1106,6 +1129,12 @@ $fontArial: "Arial", "sans-serif";
 
 /*------------------SEARCH------------------*/
 .section__search {
+  position: relative;
+}
+#directions {
+  position: absolute;
+  top: adaptiv-num-rem(-100, -130, 1920, 360);
+  left: 0;
 }
 
 .search__block-wrapper {
@@ -1311,6 +1340,13 @@ $fontArial: "Arial", "sans-serif";
 
 /*------------------STAGES------------------*/
 .section__stages {
+  position: relative;
+}
+
+#stages {
+  position: absolute;
+  top: rem(-130);
+  left: 0;
 }
 
 .stages__block-wrapper {
@@ -1455,6 +1491,7 @@ $fontArial: "Arial", "sans-serif";
 /*------------------TEAM------------------*/
 
 .section__team {
+  position: relative;
   padding: rem(70) 0 clamp(rem(10), 3.65vw, rem(70)) 0;
 
   p {
@@ -1465,6 +1502,12 @@ $fontArial: "Arial", "sans-serif";
     color: #808080;
     padding-left: clamp(rem(25), 3.91vw, rem(75));
   }
+}
+
+#team {
+  position: absolute;
+  top: rem(-60);
+  left: 0;
 }
 
 /*------------------SLIDER------------------*/
@@ -1608,7 +1651,14 @@ $fontArial: "Arial", "sans-serif";
 
 /*------------------REQUEST------------------*/
 .section__request {
+  position: relative;
   padding-bottom: clamp(rem(60), 6.77vw, rem(130));
+}
+
+#feedback {
+  position: absolute;
+  top: rem(-110);
+  left: 0;
 }
 
 .request__title {
@@ -1639,7 +1689,7 @@ $fontArial: "Arial", "sans-serif";
   padding: 0 clamp(rem(10), 10.42vw, rem(200));
 
   p {
-    padding: rem(25) 0 rem(80) 0;
+    padding: rem(25) 0 rem(60) 0;
     font-family: $fontArial;
     font-weight: 400;
     font-size: clamp(rem(16), 1.25vw, rem(24));
@@ -1656,12 +1706,18 @@ $fontArial: "Arial", "sans-serif";
 }
 
 .request__form-wrapper {
-  gap: clamp(rem(60), 6.25vw, rem(120));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(rem(400), 1fr));
+  row-gap: clamp(rem(30), 3.13vw, rem(60));
+  column-gap: clamp(rem(30), 8.59vw, rem(165));
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(auto-fit, minmax(rem(270), 1fr));
+  }
 }
 
-.request__form-flex {
-  gap: clamp(rem(60), 8.59vw, rem(165));
-}
+// .request__form-flex {
+//   gap: clamp(rem(30), 8.59vw, rem(165));
+// }
 
 .input__item {
   position: relative;
@@ -1958,7 +2014,7 @@ $fontArial: "Arial", "sans-serif";
 .arcticle__question {
   padding: 0 clamp(rem(25), 13.02vw, rem(250)) 0
     clamp(rem(25), 10.42vw, rem(200));
-  gap: clamp(rem(25), 3.91vw, rem(75));
+  // gap: clamp(rem(10), 0.78vw, rem(15));
 }
 
 .question__block {
@@ -2038,7 +2094,7 @@ $fontArial: "Arial", "sans-serif";
   font-family: $fontArial;
   font-size: clamp(rem(20), 2.08vw, rem(40));
   line-height: clamp(rem(24), 2.6vw, rem(50));
-  color: #808080;
+  color: $colorOrange;
   position: relative;
   padding: 0 0 0 clamp(rem(25), 10.42vw, rem(200));
 
@@ -2121,6 +2177,12 @@ $fontArial: "Arial", "sans-serif";
 
 .section__news {
   position: relative;
+}
+
+#news {
+  position: absolute;
+  top: rem(-100);
+  left: 0;
 }
 
 .news__block-grid {
