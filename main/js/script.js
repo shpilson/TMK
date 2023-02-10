@@ -15,7 +15,6 @@ const lazyLoadImage = () => {
 
   function handleImg(myImg, observerLazyLoad) {
     myImg.forEach((myImgSingle) => {
-      console.log(myImgSingle.intersectionRatio);
       if (myImgSingle.intersectionRatio > 0) {
         loadImage(myImgSingle.target);
       }
