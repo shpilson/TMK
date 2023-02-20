@@ -538,11 +538,11 @@ $fontArial: "Arial", "sans-serif";
     -o-transition: 0.3s;
   }
 
-  &:hover {
-    svg {
-      fill: $colorOrange;
-    }
-  }
+  // &:hover {
+  //   svg {
+  //     fill: $colorOrange;
+  //   }
+  // }
 }
 
 .header-right {

@@ -228,10 +228,17 @@ $(function () {
         f = this;
       var th = $(this);
       evt.preventDefault();
-      http.open("POST", "contact.php", true);
+      http.open("POST", "sendform.php", true);
       http.onreadystatechange = function () {
         if (http.readyState == 4 && http.status == 200) {
-          alert(http.responseText);
+          jQuery.ajax({
+            success: swal({
+              title: "Спасибо за заявку!",
+              type: "success",
+              showConfirmButton: false,
+              timer: 2000,
+            }),
+          });
           if (http.responseText.indexOf(f.nameFF.value) == 0) {
             // очистить поля формы, если в ответе первым словом будет имя отправителя (nameFF)
             th.trigger("reset");
