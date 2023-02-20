@@ -1,6 +1,6 @@
 <?php
 if (isset ($_POST['contactFF'])) {
-  $to = "korobko.studio@gmail.com"; // своя почта
+  $to = "innovations@tmk-group.com"; // своя почта
   $from = "support@tpverstak.ru";
   $subject = "Заполнена контактная форма на сайте ".$_SERVER['HTTP_REFERER'];
 $message = "\n\nИмя пользователя: ".$_POST['nameFF']."\n\nЭлектронная почта: ".$_POST['contactFF']."\n\nТелефон пользователя: ".$_POST['telFF']."\n\nПолное название юр. лица: ".$_POST['companyFF']."\n\nИНН ".$_POST['tinFF']."\n\nНазвание проекта: ".$_POST['projectFF']."\n\nОписание проекта: ".$_POST['descriptionFF']."\n\nОписание потенциального эффекта для бизнеса ТМК: ".$_POST['businesFF']."\n\nАдрес сайта: ".$_SERVER['HTTP_REFERER'];
