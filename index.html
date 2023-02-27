@@ -1,60 +1,899 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>TMK – акселлератор</title>
-    <meta
-      property="og:title"
-      content="Трубная Металлургическая Компания :: TMK"
-    />
-    <meta
-      name="description"
-      content="Корпоративный портал Трубной Металлургической Компании. ТМК является крупнейшим производителем стальных труб в России."
-    />
-    <meta
-      name="keywords"
-      content="Трубная Металлургическая Компания, труба стальная, трубы стальные гост, трубы стальные бесшовные, труба стальная электросварная"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta property="og:url" content="https://innovations.tmk-group.ru/" />
-    <meta property="og:locale" content="ru_RU" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://innovations.tmk-group.ru/" />
-    <link rel="canonical" href="https://innovations.tmk-group.ru/" />
+  <title>TMK – акселлератор</title>
+  <meta property="og:title" content="Трубная Металлургическая Компания :: TMK" />
+  <meta name="description"
+    content="Корпоративный портал Трубной Металлургической Компании. ТМК является крупнейшим производителем стальных труб в России." />
+  <meta name="keywords"
+    content="Трубная Металлургическая Компания, труба стальная, трубы стальные гост, трубы стальные бесшовные, труба стальная электросварная" />
 
-    <link rel="stylesheet" type="text/css" href="main/css/style.css?v=21" />
-    <link rel="stylesheet" href="main/css/sweetalert.min.css" />
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="/favicon.ico" />
+  <meta property="og:url" content="https://innovations.tmk-group.ru/" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://innovations.tmk-group.ru/" />
+  <link rel="canonical" href="https://innovations.tmk-group.ru/" />
 
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
+  <link rel="stylesheet" type="text/css" href="main/css/style.css?v=21" />
+  <link rel="stylesheet" href="main/css/sweetalert.min.css" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/favicon.ico" />
 
-    <script src="main/js/script.js?v=10" defer></script>
-  </head>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
-  <body id="phone__menu-id-body">
-    <div class="preloader">
-      <div class="ring">
-        <div style="line-height: 21px; padding-top: 55px">Checking browser</div>
-        <span class="preloader__rotate"></span>
-      </div>
+  <script src="main/js/script.js?v=10" defer></script>
+</head>
+
+<body id="phone__menu-id-body">
+  <div class="preloader">
+    <div class="ring">
+      <div style="line-height: 21px; padding-top: 55px">Checking browser</div>
+      <span class="preloader__rotate"></span>
     </div>
+  </div>
 
-    <div class="wrapper">
-      <header id="header" class="header d-fl">
-        <a href="https://www.tmk-group.ru/cap.html" class="header__logo">
+  <div class="wrapper">
+    <header id="header" class="header d-fl">
+      <a href="https://www.tmk-group.ru/cap.html" class="header__logo">
+        <svg>
+          <use xlink:href="main/sprite/icon.svg#icon-logo"></use>
+        </svg>
+      </a>
+      <div class="header-right d-fl">
+        <nav class="header__nav d-fl-col">
+          <ul class="d-fl">
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#offer">Мы предлагаем</a></li>
+            <li><a href="#conditions">Условия</a></li>
+            <li><a href="#directions">Направления</a></li>
+            <li><a href="#stages">Этапы</a></li>
+            <li><a href="#team">Команда</a></li>
+            <li><a href="#questions">Частые вопросы</a></li>
+            <li><a href="#news">Новости</a></li>
+          </ul>
+          <hr class="header__line" />
+        </nav>
+      </div>
+
+      <div class="header__btn d-fl">
+        <a class="accelerator__btn header__accelerator btn__animation-orange" href="#feedback">Акселератор</a>
+        <a class="request__link" href="#feedback">Подать заявку</a>
+      </div>
+
+      <div class="header__mobile-btn">
+        <span></span>
+        <span></span>
+      </div>
+      <div class="header__mobile">
+        <div class="header__mobile-wrapper d-fl-col">
+          <div class="header__mobile-btn--close menu__close">
+            <span></span>
+            <span></span>
+          </div>
+
+          <nav class="header__nav-mobile d-fl-col">
+            <ul class="d-fl-col">
+              <li>
+                <a class="menu__close" href="#about">О нас</a>
+              </li>
+              <li>
+                <a class="menu__close" href="#offer">Мы предлагаем</a>
+              </li>
+              <li>
+                <a class="menu__close" href="#conditions">Условия</a>
+              </li>
+              <li>
+                <a class="menu__close" href="#directions">Направления</a>
+              </li>
+              <li>
+                <a class="menu__close" href="#stages">Этапы</a>
+              </li>
+              <li>
+                <a class="menu__close" href="#team">Команда</a>
+              </li>
+              <li>
+                <a class="menu__close" href="#questions">Частые вопросы</a>
+              </li>
+              <li>
+                <a class="menu__close" href="#news">Новости</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="header__nav-mobile-bottom d-fl">
+            <a href="/" class="header__logo">
+              <svg>
+                <use xlink:href="main/sprite/icon.svg#icon-logo"></use>
+              </svg>
+            </a>
+
+            <a class="accelerator__btn header__accelerator btn__animation-orange menu__close"
+              href="#feedback">Акселератор</a>
+
+            <div style="width: 40px"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section id="section__start" class="section__start d-fl-col">
+        <video poster="main/img/background/backgroundStart.webp" preload="auto" autoplay muted loop
+          class="start__video">
+          <source type="video/webm" src="main/video/TMK-R&D-01-Home.webm" />
+          <source type="video/mp4" src="main/video/TMK-R&D-01-Home.mp4" />
+        </video>
+        <div class="start__video-back"></div>
+        <div class="start__title d-fl-col start__block-animation">
+          <h1>
+            Станьте участником программы по внедрению инновационных решений
+            на предприятиях Группы ТМК
+          </h1>
+          <h4>Прием заявок на участие уже открыт</h4>
+          <a href="#feedback" class="request__btn btn__animation-orange">Подать заявку</a>
+        </div>
+      </section>
+
+      <section class="section__about">
+        <span id="about"></span>
+        <article>
+          <h4 class="title__section">О нас</h4>
+          <div class="paragraph__about-wrapper d-fl-col">
+            <p class="paragraph__section about__paragraph-animation-left">
+              Трубная Металлургическая Компания <span>(ТМК)</span> — является
+              глобальным поставщиком стальных труб, трубных решений
+              и сопутствующих сервисов для нефтегазового сектора. Наибольшую
+              долю в структуре продаж ТМК занимают нарезные нефтегазовые
+              трубы. Компания также поставляет специальные трубы
+              и трубопроводные системы для атомной энергетики, продукцию для
+              химической промышленности, машиностроения, строительства
+              и других отраслей.
+            </p>
+            <p class="paragraph__section about__paragraph-animation-right">
+              Мощности компании обеспечивают полный цикл создания передовых
+              трубных решений — от концепта до проведения испытаний и запуска
+              в производство. ТМК располагает разветвленной сбытовой сетью,
+              которая позволяет реализовывать продукцию потребителям в России
+              и за рубежом.
+            </p>
+          </div>
+        </article>
+
+        <div class="about__info">
+          <div class="about__info-bottom d-fl">
+            <div class="about__info-wrapper d-fl-col">
+              <div class="about__info-title d-fl">
+                <span>№1</span>
+                <p>В мире по объему реализации стальных труб</p>
+              </div>
+              <div class="about__info-left">
+                <div class="about__card about__card-animation--1">
+                  <span>429</span>
+                  <p>Млрд рублей — выручка за 2021 год</p>
+                </div>
+                <div class="about__card about__card-animation--1">
+                  <span>500+</span>
+                  <p>Проектов в портфеле</p>
+                </div>
+                <div class="about__card about__card-animation--2">
+                  <span>6</span>
+                  <p>Крупных трубных заводов в России</p>
+                </div>
+                <div class="about__card about__card-animation--2">
+                  <span>30</span>
+                  <p>Проектов для пилотирования</p>
+                </div>
+                <div class="about__card about__card-animation--3">
+                  <span>4,3</span>
+                  <p>Млн тонн труб реализовано в 2021 году</p>
+                </div>
+                <div class="about__card about__card-animation--3">
+                  <span>5</span>
+                  <p>Проектов под пилотное внедрение</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="about__info-right">
+              <img src="" alt="about" data="main/img/photo/about.webp" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section__offers">
+        <span id="offer"></span>
+        <h4 class="title__section">Мы предлагаем проекту</h4>
+
+        <div class="offers__description d-fl-col">
+          <div class="offers__description-block d-fl about__paragraph-animation-left">
+            <div class="offers__description-block--img">
+              <img src="" alt="offers" data="main/img/icon/offers-idea.svg" />
+            </div>
+            <p>
+              Рекомендации от ведущих экспертов компании, неограниченный
+              доступ к экспертизе
+            </p>
+          </div>
+          <div class="offers__description-block d-fl about__paragraph-animation-right">
+            <div class="offers__description-block--img">
+              <img src="" alt="offers" data="main/img/icon/offers-technology.svg" />
+            </div>
+            <p>
+              Возможность пилотирования решений на производственных площадках
+              ТМК
+            </p>
+          </div>
+          <div class="offers__description-block d-fl about__paragraph-animation-left">
+            <div class="offers__description-block--img">
+              <img src="" alt="offers" data="main/img/icon/offers-review.svg" />
+            </div>
+            <p>Возможность оплаты пилотного опробования технологии</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section__conditions">
+        <span id="conditions"></span>
+        <h4 class="title__section">Условия</h4>
+
+        <div class="conditions__card-grid">
+          <div class="conditions__card-wrapper d-fl card-animation-1">
+            <div class="conditions__card">
+              <h5>Продукт <br /><br /></h5>
+              <div class="conditions__card-img">
+                <svg>
+                  <use xlink:href="main/sprite/icon.svg#icon-settings"></use>
+                </svg>
+              </div>
+              <p>
+                Наличие готового продукта (от MVP до промышленного решения)
+              </p>
+            </div>
+            <div class="conditions__card-back"></div>
+          </div>
+
+          <div class="conditions__card-wrapper d-fl card-animation-2">
+            <div class="conditions__card">
+              <h5>Соответствие <br /><br /></h5>
+              <div class="conditions__card-img">
+                <svg>
+                  <use xlink:href="main/sprite/icon.svg#icon-product"></use>
+                </svg>
+              </div>
+              <p>Соответствие продукта заявленным направлениям</p>
+            </div>
+            <div class="conditions__card-back"></div>
+          </div>
+
+          <div class="conditions__card-wrapper d-fl card-animation-3">
+            <div class="conditions__card">
+              <h5>Готовность <br /><br /></h5>
+              <div class="conditions__card-img">
+                <svg>
+                  <use xlink:href="main/sprite/icon.svg#icon-checmark"></use>
+                </svg>
+              </div>
+              <p>Готовность пилотирования решения на производственных площадках ТМК</p>
+            </div>
+            <div class="conditions__card-back"></div>
+          </div>
+
+          <div class="conditions__card-wrapper d-fl card-animation-4">
+            <div class="conditions__card">
+              <h5>Личное участие</h5>
+              <div class="conditions__card-img">
+                <svg>
+                  <use xlink:href="main/sprite/icon.svg#icon-hands"></use>
+                </svg>
+              </div>
+              <p>
+                Готовность основателя стартапа лично принять участие в
+                программе
+              </p>
+            </div>
+            <div class="conditions__card-back"></div>
+          </div>
+
+          <div class="conditions__card-wrapper d-fl card-animation-5">
+            <div class="conditions__card">
+              <h5>Команда <br /><br /></h5>
+              <div class="conditions__card-img">
+                <svg>
+                  <use xlink:href="main/sprite/icon.svg#icon-people"></use>
+                </svg>
+              </div>
+              <p>
+                Компетентная команда, обладающая опытом создания технологий
+                и управления бизнесом
+              </p>
+            </div>
+            <div class="conditions__card-back"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section__search">
+        <span id="directions"></span>
+        <h4 class="title__section">Направления поиска</h4>
+
+        <div class="search__block-wrapper d-fl-col">
+          <div class="search__block d-fl-wrap start__block-animation">
+            <div class="search__block-img">
+              <div class="search-img">
+                <img src="" alt="industrial" data="main/img/photo/search-industrial.webp" />
+              </div>
+              <h3>Новые производственные технологии</h3>
+            </div>
+            <div class="search__block-description search__block-description--right">
+              <ul class="search__block-list d-fl-col">
+                <li>
+                  Цифровое моделирование, в том числе цифровое моделирование
+                  новых материалов
+                </li>
+                <li>
+                  Моделирование технологических процессов трубного
+                  производства
+                </li>
+                <li>
+                  Предиктивная и прескриптивная аналитика в трубном
+                  и сталеплавильном производстве
+                </li>
+                <li>Платформы, фреймворки для цифровых двойников</li>
+                <li>Системы мониторинга состояния персонала</li>
+                <li>
+                  Решения по цифровизации в области охраны труда
+                  с использованием AR/VR технологий
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="search__block search__block--reverse d-fl-wrap start__block-animation">
+            <div class="search__block-img">
+              <div class="search-img">
+                <img src="" alt="industrial" data="main/img/photo/search-technology.webp" />
+              </div>
+              <h3>Новые материалы и технологии нанесения покрытий</h3>
+            </div>
+            <div class="search__block-description search__block-description--right search__block-description--line">
+              <ul class="search__block-list d-fl-col">
+                <li>
+                  Новые материалы защитных покрытий для наружной и внутренней
+                  поверхности стальных труб
+                </li>
+                <li>
+                  Новые технологии нанесения защитного покрытия на наружную
+                  и внутреннюю поверхность стальных труб
+                </li>
+                <li>Антикоррозионные покрытия и способы их нанесения</li>
+                <li>Новые способы подготовки поверхности стальных труб</li>
+                <li>
+                  Новые лакокрасочные материалы, стойкие к механическим
+                  повреждениям
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="search__block d-fl-wrap start__block-animation">
+            <div class="search__block-img">
+              <div class="search-img">
+                <img src="" alt="industrial" data="main/img/photo/search-advanced.webp" />
+              </div>
+              <h3>Передовые решения для трубной промышленности</h3>
+            </div>
+            <div class="search__block-description search__block-description--right search__block-description--line">
+              <ul class="search__block-list d-fl-col">
+                <li>Новые виды трубной продукции</li>
+                <li>
+                  Повышение эффективности технологических процессов трубного
+                  и сталеплавильного производства
+                </li>
+                <li>
+                  Комплексные решения по технологии раскроя трубных заготовок
+                  и новые виды режущего инструмента
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="search__block search__block--reverse d-fl-wrap start__block-animation">
+            <div class="search__block-img">
+              <div class="search-img">
+                <img src="" alt="industrial" data="main/img/photo/search-marking.webp" />
+              </div>
+              <h3>Сквозной контроль качества и маркировка продукции</h3>
+            </div>
+            <div class="search__block-description search__block-description--right search__block-description--line">
+              <ul class="search__block-list d-fl-col">
+                <li>Сквозной контроль качества и маркировки продукции</li>
+                <li>
+                  Нестандартные и инновационные системы неразрушающего
+                  контроля
+                </li>
+                <li>Бесконтактные методы измерения</li>
+              </ul>
+            </div>
+          </div>
+          <div class="search__block d-fl-wrap start__block-animation">
+            <div class="search__block-img">
+              <div class="search-img">
+                <img src="" alt="industrial" data="main/img/photo/search-ecology.webp" />
+              </div>
+              <h3>
+                Экология металлургического производства и декарбонизация
+                электрометаллургии
+              </h3>
+            </div>
+            <div class="search__block-description search__block-description--right search__block-description--line">
+              <ul class="search__block-list d-fl-col">
+                <li>
+                  Водородная энергетика, в том числе решения для
+                  транспортировки и хранения водорода
+                </li>
+                <li>Декарбонизация производства</li>
+                <li>
+                  Природоохранные технологии в части снижения выбросов (CO,
+                  NOx, Sox и др) и сбросов (нефтепродукты, взвешенные
+                  вещества, хпк, бпк,азот, фосфор, металлы в растворенном виде
+                  и др) загрязняющих веществ
+                </li>
+                <li>
+                  Эффективные технологии переработки и утилизации отходов
+                  производства
+                </li>
+                <li>
+                  Приготовление исходного сырья для выплавки стали в дсп
+                  из отходов металлургического производства
+                </li>
+                <li>Обезмасливание окалины</li>
+                <li>
+                  Улавливание и утилизация СО2 с получением товарного продукта
+                </li>
+                <li>Шумозащита и мероприятия шумоподавления</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="search__block search__block--reverse d-fl-wrap start__block-animation">
+            <div class="search__block-img">
+              <div class="search-img">
+                <img src="" alt="industrial" data="main/img/photo/search-tmk.webp" />
+              </div>
+              <h3>
+                Целевые запросы для производственных площадок группы ТМК
+              </h3>
+            </div>
+            <div class="search__block-description search__block-description--right search__block-description--line">
+              <ul class="search__block-list d-fl-col">
+                <li>Заполняется по мере поступления запросов</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section__stages">
+        <span id="stages"></span>
+        <h4 class="title__section">Этапы</h4>
+
+        <div class="stages__block-wrapper">
+          <div class="stages__block">
+            <div class="stages__card d-fl-col card-animation-1">
+              <div class="stages__img">
+                <img src="" alt="request" data="main/img/icon/request.png" />
+              </div>
+              <h6>Прием <br />заявок</h6>
+            </div>
+            <div class="stages__card d-fl-col card-animation-2">
+              <div class="stages__img">
+                <img src="" alt="request" data="main/img/icon/expertise.png" />
+              </div>
+              <h6>Экспертиза</h6>
+            </div>
+            <div class="stages__card d-fl-col card-animation-3">
+              <div class="stages__img">
+                <img src="" alt="request" data="main/img/icon/preparation.png" />
+              </div>
+              <h6>Подготовка к пилотному внедрению</h6>
+            </div>
+            <div class="stages__card d-fl-col card-animation-4">
+              <div class="stages__img">
+                <img src="" alt="request" data="main/img/icon/implementation.png" />
+              </div>
+              <h6>Пилотное <br />внедрение</h6>
+            </div>
+            <div class="stages__card d-fl-col card-animation-5">
+              <div class="stages__img">
+                <img src="" alt="request" data="main/img/icon/analise.png" />
+              </div>
+              <h6>Анализ <br />пилота</h6>
+            </div>
+            <div class="stages__card d-fl-col card-animation-6">
+              <div class="stages__img">
+                <img src="" alt="request" data="main/img/icon/industrial.png" />
+              </div>
+              <h6>Промышленное внедрение</h6>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section__team">
+        <span id="team"></span>
+        <h4 class="title__section">Команда экспертов</h4>
+
+        <div class="slider title-animation d-fl">
+          <div class="slider__item">
+            <div class="slider__item-img">
+              <img src="" alt="pic" data="main/img/photo/pishmincev.webp" />
+            </div>
+            <div class="slier__description">
+              <h6>Пышминцев Игорь Юрьевич</h6>
+              <span>Директор по научной работе</span>
+            </div>
+          </div>
+
+          <div class="slider__item">
+            <div class="slider__item-img">
+              <img src="" alt="pic" data="main/img/photo/shadrina.webp" />
+            </div>
+            <div class="slier__description">
+              <h6>Шадрина Юлия Викторовна</h6>
+              <span>Директор по инновационному развитию</span>
+            </div>
+          </div>
+
+          <div class="slider__item">
+            <div class="slider__item-img">
+              <img src="" alt="pic" data="main/img/photo/gizatulin.webp" />
+            </div>
+            <div class="slier__description">
+              <h6>Гизатуллин Антон Бильгуварович</h6>
+              <span>Заместитель Директора по научной работе</span>
+            </div>
+          </div>
+
+          <div class="slider__item">
+            <div class="slider__item-img">
+              <img src="" alt="pic" data="main/img/photo/illina.webp" />
+            </div>
+            <div class="slier__description">
+              <h6>Ильина Мария Вадимовна</h6>
+              <span>Начальник отдела реализации инновационных проектов и
+                НВП</span>
+            </div>
+          </div>
+
+          <div class="slider__item">
+            <div class="slider__item-img">
+              <img src="" alt="pic" data="main/img/photo/arsenkin.webp" />
+            </div>
+            <div class="slier__description">
+              <h6>Арсенкин Александр Михайлович</h6>
+              <span>Заместитель заведующего лабораторией материаловедения и
+                сварки</span>
+            </div>
+          </div>
+
+          <div class="slider__item">
+            <div class="slider__item-img">
+              <img src="" alt="pic" data="main/img/photo/prikina.webp" />
+            </div>
+            <div class="slier__description">
+              <h6>Прыкина Юлия Вячеславовна</h6>
+              <span>Заведующая лабораторией полимерных, композиционных,
+                лакокрасочных материалов</span>
+            </div>
+          </div>
+
+          <div class="slider__item">
+            <div class="slider__item-img">
+              <img src="" alt="pic" data="main/img/photo/shkuratov.webp" />
+            </div>
+            <div class="slier__description">
+              <h6>Шкуратов Евгений Александрович</h6>
+              <span>Начальник отдела цифровизации технологий</span>
+            </div>
+          </div>
+
+          <div class="slider__item">
+            <div class="slider__item-img">
+              <img src="" alt="pic" data="main/img/photo/mihaylova.webp" />
+            </div>
+            <div class="slier__description">
+              <h6>Михайлова Елена Николаевна</h6>
+              <span>Главный эколог</span>
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class="slider__item-img">
+              <img src="" alt="pic" data="main/img/photo/podgornih.webp" />
+            </div>
+            <div class="slier__description">
+              <h6>Подгорных Елена Владимировна</h6>
+              <span>Заместитель начальника Управления эффективностью
+                производственной экологии</span>
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class="slider__item-img">
+              <img src="" alt="pic" data="main/img/photo/lunev.webp" />
+            </div>
+            <div class="slier__description">
+              <h6>Лунев Александр Алексеевич</h6>
+              <span>Начальник центра математического моделирования и методов
+                искусственного интеллекта</span>
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class="slider__item-img">
+              <img src="" alt="pic" data="main/img/photo/pasuta.webp" />
+            </div>
+            <div class="slier__description">
+              <h6>Пасюта Антон Павлович</h6>
+              <span>Руководитель сервиса технических программ обучения</span>
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class="slider__item-img">
+              <img src="" alt="pic" data="main/img/photo/kormilcev.webp" />
+            </div>
+            <div class="slier__description">
+              <h6>Кормильцев Алексей Владимирович</h6>
+              <span>Начальник отдела реализации проектов по новым видам
+                индустриальных труб</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section__request">
+        <span id="feedback"></span>
+        <div class="request__title d-fl"><span>Заявка</span></div>
+
+        <form class="request__form start__block-animation" id="ajax-contact-form" enctype="multipart/form-data"
+          method="post">
+          <p class="form__info-description">
+            обязательные для заполнения поля
+          </p>
+
+          <div class="request__form-wrapper d-fl-col">
+            <div class="input__item">
+              <input class="input__form" type="text" name="nameFF" id="nameFF" required autocomplete="off"
+                placeholder=" " />
+              <label class="label__form" for="nameFF">ФИО</label>
+            </div>
+
+            <div class="input__item">
+              <input class="input__form" type="tel" name="telFF" id="telFF" required autocomplete="off"
+                placeholder=" " />
+              <label class="label__form" for="telFF">Телефон</label>
+            </div>
+
+            <div class="input__item">
+              <input class="input__form" type="email" name="contactFF" id="contactFF" required autocomplete="off"
+                placeholder=" " />
+              <label class="label__form" for="contactFF">Электронная почта</label>
+            </div>
+
+            <div class="input__item">
+              <input class="input__form" type="text" name="companyFF" id="companyFF" autocomplete="off"
+                placeholder=" " />
+              <label class="label__form" for="companyFF">Полное название юр. лица</label>
+            </div>
+
+            <div class="input__item">
+              <input class="input__form" type="text" name="tinFF" id="tinFF" autocomplete="off" placeholder=" " />
+              <label class="label__form" for="tinFF">ИНН</label>
+            </div>
+
+            <div class="input__item">
+              <input class="input__form" type="text" name="projectFF" id="projectFF" autocomplete="off"
+                placeholder=" " />
+              <label class="label__form" for="projectFF">Название проекта</label>
+            </div>
+
+            <div class="input__item">
+              <input class="input__form" type="text" name="businesFF" id="businesFF" autocomplete="off"
+                placeholder=" " />
+              <label class="label__form" for="businesFF">Описание потенциального эффекта</label>
+            </div>
+
+            <div class="input__item">
+              <input class="input__form" type="text" name="descriptionFF" id="descriptionFF" autocomplete="off"
+                placeholder=" " />
+              <label class="label__form" for="descriptionFF">Описание проекта</label>
+            </div>
+          </div>
+
+          <div class="form__btn d-fl-wrap">
+            <div class="input__file-wrapper d-fl-col">
+              <span class="input__file-description">Загрузите презентацию своего проекта:</span>
+              <input name="fileFF" type="file" id="fileFF" class="input input__file" multiple />
+              <label for="fileFF" class="input__file-button btn__animation-orange">
+                <span class="input__file-button--text">Загрузить файл</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="input__agreement d-fl-col">
+            <div class="d-fl-col">
+              <div class="radio">
+                <input class="custom-radio" type="radio" id="color-1" name="color-1" value="personalDate" required />
+                <label class="radio-label" for="color-1">Согласен/на на обработку персональных данных</label>
+              </div>
+              <div class="radio">
+                <input class="custom-radio" type="radio" id="color-4" name="color-4" value="rule" required />
+                <label class="radio-label" for="color-4">Согласен/на с правилами участия в программе</label>
+              </div>
+            </div>
+          </div>
+
+          <button class="submit__form" type="submit" id="submitFF">
+            Отправить
+          </button>
+        </form>
+        <span id="questions"></span>
+      </section>
+
+      <section class="section__question">
+        <h4 class="title__section">Частые вопросы</h4>
+
+        <article class="arcticle__question d-fl-col">
+          <div class="question__block about__paragraph-animation-left">
+            <h3>
+              Должен ли я передать интеллектуальные права по завершение
+              акселерационной программы?
+            </h3>
+            <p>
+              Нет. Права, принадлежащие заявителю, не передаются в рамках
+              программы. В случае, если результат интеллектуальной
+              собственности был создан на основе данных группы компаний ТМК,
+              то такой РИД передается в компанию.
+            </p>
+          </div>
+
+          <div class="question__block about__paragraph-animation-right">
+            <h3>
+              Должен ли я делиться конфиденциальной информацией о проекте?
+            </h3>
+            <p>
+              Нет. Указывайте в заявке на отбор только те данные, для которых
+              не нужно соглашение о неразглашении конфиденциальной информации.
+            </p>
+          </div>
+
+          <div class="question__block about__paragraph-animation-left">
+            <h3>Могут ли физические лица участвовать в программе?</h3>
+            <p>
+              Подать заявку на участие можно как физическому лицу, так и
+              юридическому. В случае успешного отбора физического лица,
+              необходимо будет оформить юридическое лицо.
+            </p>
+          </div>
+
+          <div class="question__block about__paragraph-animation-right">
+            <h3>Могу ли я подать несколько заявок?</h3>
+            <p>
+              Да. Каждый участник может подать неограниченное количество
+              заявок (без дублирования).
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section class="section__partners">
+        <h4 class="partners__title">Партнеры</h4>
+
+        <div class="partners__block d-fl">
+          <a target="_blank" href="https://rusnatt.ru/" class="partners__block-img slider-animation-1">
+            <svg>
+              <use xlink:href="main/sprite/icon.svg#partners-1"></use>
+            </svg>
+          </a>
+          <a target="_blank" href="https://platform.nti.work/" class="partners__block-img slider-animation-2">
+            <svg>
+              <use xlink:href="main/sprite/icon.svg#partners-2"></use>
+            </svg>
+          </a>
+          <a target="_blank" href="https://digital-natt.ru/" class="partners__block-img slider-animation-3">
+            <svg>
+              <use xlink:href="main/sprite/icon.svg#partners-3"></use>
+            </svg>
+          </a>
+          <a target="_blank" href="https://ma.innoagency.ru/" class="partners__block-img slider-animation-4">
+            <svg>
+              <use xlink:href="main/sprite/icon.svg#partners-4"></use>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <section class="section__news d-fl-col">
+        <span id="news"></span>
+        <h4 class="title__section">Новости</h4>
+
+        <div class="news__block-grid start__block-animation">
+          <article class="news__card">
+            <a href="https://www.tmk-group.ru/">
+              <div class="news__card-img">
+                <img src="main/img/photo/newsCard-1.webp" alt="news__card" data="main/img/photo/newsCard-1.webp" />
+              </div>
+              <span>17.03.21</span>
+              <h6>
+                ТМК отберет стартапы и проведет мастер-классы на Startup
+                Village в Сколково
+              </h6>
+            </a>
+          </article>
+
+          <article class="news__card">
+            <a href="https://www.tmk-group.ru/">
+              <div class="news__card-img">
+                <img src="" alt="news__card" data="main/img/photo/newsCard-2.webp" />
+              </div>
+              <span>17.03.21</span>
+              <h6>
+                ТМК и Группа Синара приняли участие в Петербургском
+                международном экономическом форуме
+              </h6>
+            </a>
+          </article>
+
+          <article class="news__card">
+            <a href="https://www.tmk-group.ru/">
+              <div class="news__card-img">
+                <img src="" alt="news__card" data="main/img/photo/newsCard-3.webp" />
+              </div>
+              <span>06.05.21</span>
+              <h6>
+                ТМК на ПМЭФ-2021 представила опыт организации работы в
+                условиях пандемии
+              </h6>
+            </a>
+          </article>
+        </div>
+
+        <a href="https://www.tmk-group.ru/" id="btn-hidden" class="news__btn-more">Больше</a>
+      </section>
+
+      <div class="scroll__btn d-fl-col js-back__top">
+        <a href="#section__start" class="start__btn">К началу</a>
+      </div>
+
+      <section class="section__info">
+        <video poster="main/img/background/info.webp" preload="auto" autoplay muted loop
+          class="start__video video__footer">
+          <source type="video/webm" src="main/video/TMK-R&D-03-Film.webm" />
+          <source type="video/mp4" src="main/video/TMK-R&D-03-Film.mp4" />
+        </video>
+        <div class="start__video-back"></div>
+      </section>
+    </main>
+
+    <footer class="footer d-fl-col">
+      <div class="footer-top d-fl">
+        <a href="#section__start" class="header__logo">
           <svg>
             <use xlink:href="main/sprite/icon.svg#icon-logo"></use>
           </svg>
         </a>
+        <div class="header__mobile-btn">
+          <span></span>
+          <span></span>
+        </div>
         <div class="header-right d-fl">
+          <div class="header__mobile-btn-close">
+            <span></span>
+            <span></span>
+          </div>
+
           <nav class="header__nav d-fl-col">
             <ul class="d-fl">
               <li><a href="#about">О нас</a></li>
@@ -66,1130 +905,39 @@
               <li><a href="#questions">Частые вопросы</a></li>
               <li><a href="#news">Новости</a></li>
             </ul>
-            <hr class="header__line" />
           </nav>
         </div>
+      </div>
 
-        <div class="header__btn d-fl">
-          <a
-            class="accelerator__btn header__accelerator btn__animation-orange"
-            href="#feedback"
-            >Акселератор</a
-          >
-          <a class="request__link" href="#feedback">Подать заявку</a>
+      <div class="footer__bottom d-fl-wrap">
+        <div class="footer__bottom-left d-fl-col">
+          <span>© 2023 TMK R&D</span>
+          <span>Все права защищены</span>
         </div>
+        <div class="footer__bottom-center d-fl-col">
+          <div class="footer-center d-fl-col">
+            <span>Контакты</span>
+            <a href="/">innovations@tmk-group.com</a>
+          </div>
 
-        <div class="header__mobile-btn">
-          <span></span>
-          <span></span>
+          <a href="#feedback" class="request__btn btn__animation-orange">Подать заявку</a>
         </div>
-        <div class="header__mobile">
-          <div class="header__mobile-wrapper d-fl-col">
-            <div class="header__mobile-btn--close menu__close">
-              <span></span>
-              <span></span>
-            </div>
-
-            <nav class="header__nav-mobile d-fl-col">
-              <ul class="d-fl-col">
-                <li>
-                  <a class="menu__close" href="#about">О нас</a>
-                </li>
-                <li>
-                  <a class="menu__close" href="#offer">Мы предлагаем</a>
-                </li>
-                <li>
-                  <a class="menu__close" href="#conditions">Условия</a>
-                </li>
-                <li>
-                  <a class="menu__close" href="#directions">Направления</a>
-                </li>
-                <li>
-                  <a class="menu__close" href="#stages">Этапы</a>
-                </li>
-                <li>
-                  <a class="menu__close" href="#team">Команда</a>
-                </li>
-                <li>
-                  <a class="menu__close" href="#questions">Частые вопросы</a>
-                </li>
-                <li>
-                  <a class="menu__close" href="#news">Новости</a>
-                </li>
-              </ul>
-            </nav>
-
-            <div class="header__nav-mobile-bottom d-fl">
-              <a href="/" class="header__logo">
-                <svg>
-                  <use xlink:href="main/sprite/icon.svg#icon-logo"></use>
-                </svg>
-              </a>
-
-              <a
-                class="accelerator__btn header__accelerator btn__animation-orange menu__close"
-                href="#feedback"
-                >Акселератор</a
-              >
-
-              <div style="width: 40px"></div>
-            </div>
-          </div>
+        <div class="footer__bottom-right">
+          <a href="/">Политика<br />
+            конфиденциальности</a>
         </div>
-      </header>
+      </div>
+    </footer>
+  </div>
 
-      <main class="main">
-        <section id="section__start" class="section__start d-fl-col">
-          <video
-            poster="main/img/background/backgroundStart.webp"
-            preload="auto"
-            autoplay
-            muted
-            loop
-            class="start__video"
-          >
-            <source type="video/webm" src="main/video/TMK-R&D-01-Home.webm" />
-            <source type="video/mp4" src="main/video/TMK-R&D-01-Home.mp4" />
-          </video>
-          <div class="start__video-back"></div>
-          <div class="start__title d-fl-col start__block-animation">
-            <h1>
-              Станьте участником программы по внедрению инновационных решений
-              на предприятиях Группы ТМК
-            </h1>
-            <h4>Прием заявок на участие уже открыт</h4>
-            <a href="#feedback" class="request__btn btn__animation-orange"
-              >Подать заявку</a
-            >
-          </div>
-        </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-        <section class="section__about">
-          <span id="about"></span>
-          <article>
-            <h4 class="title__section">О нас</h4>
-            <div class="paragraph__about-wrapper d-fl-col">
-              <p class="paragraph__section about__paragraph-animation-left">
-                Трубная Металлургическая Компания <span>(ТМК)</span> — является
-                глобальным поставщиком стальных труб, трубных решений
-                и сопутствующих сервисов для нефтегазового сектора. Наибольшую
-                долю в структуре продаж ТМК занимают нарезные нефтегазовые
-                трубы. Компания также поставляет специальные трубы
-                и трубопроводные системы для атомной энергетики, продукцию для
-                химической промышленности, машиностроения, строительства
-                и других отраслей.
-              </p>
-              <p class="paragraph__section about__paragraph-animation-right">
-                Мощности компании обеспечивают полный цикл создания передовых
-                трубных решений — от концепта до проведения испытаний и запуска
-                в производство. ТМК располагает разветвленной сбытовой сетью,
-                которая позволяет реализовывать продукцию потребителям в России
-                и за рубежом.
-              </p>
-            </div>
-          </article>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-          <div class="about__info">
-            <div class="about__info-bottom d-fl">
-              <div class="about__info-wrapper d-fl-col">
-                <div class="about__info-title d-fl">
-                  <span>№1</span>
-                  <p>В мире по объему реализации стальных труб</p>
-                </div>
-                <div class="about__info-left">
-                  <div class="about__card about__card-animation--1">
-                    <span>429</span>
-                    <p>Млрд рублей — выручка за 2021 год</p>
-                  </div>
-                  <div class="about__card about__card-animation--1">
-                    <span>500+</span>
-                    <p>Проектов в портфеле</p>
-                  </div>
-                  <div class="about__card about__card-animation--2">
-                    <span>6</span>
-                    <p>Крупных трубных заводов в России</p>
-                  </div>
-                  <div class="about__card about__card-animation--2">
-                    <span>30</span>
-                    <p>Проектов для пилотирования</p>
-                  </div>
-                  <div class="about__card about__card-animation--3">
-                    <span>4,3</span>
-                    <p>Млн тонн труб реализовано в 2021 году</p>
-                  </div>
-                  <div class="about__card about__card-animation--3">
-                    <span>5</span>
-                    <p>Проектов под пилотное внедрение</p>
-                  </div>
-                </div>
-              </div>
+  <script src="main/js/sweetalert.min.js"></script>
+  <script src="main/js/form.js?v=10"></script>
+</body>
 
-              <div class="about__info-right">
-                <img src="" alt="about" data="main/img/photo/about.webp" />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section__offers">
-          <span id="offer"></span>
-          <h4 class="title__section">Мы предлагаем проекту</h4>
-
-          <div class="offers__description d-fl-col">
-            <div
-              class="offers__description-block d-fl about__paragraph-animation-left"
-            >
-              <div class="offers__description-block--img">
-                <img src="" alt="offers" data="main/img/icon/offers-idea.svg" />
-              </div>
-              <p>
-                Рекомендации от ведущих экспертов компании, неограниченный
-                доступ к экспертизе
-              </p>
-            </div>
-            <div
-              class="offers__description-block d-fl about__paragraph-animation-right"
-            >
-              <div class="offers__description-block--img">
-                <img
-                  src=""
-                  alt="offers"
-                  data="main/img/icon/offers-technology.svg"
-                />
-              </div>
-              <p>
-                Возможность пилотирования решений на производственных площадках
-                ТМК
-              </p>
-            </div>
-            <div
-              class="offers__description-block d-fl about__paragraph-animation-left"
-            >
-              <div class="offers__description-block--img">
-                <img
-                  src=""
-                  alt="offers"
-                  data="main/img/icon/offers-review.svg"
-                />
-              </div>
-              <p>Возможность оплаты пилотного опробования технологии</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="section__conditions">
-          <span id="conditions"></span>
-          <h4 class="title__section">Условия</h4>
-
-          <div class="conditions__card-grid">
-            <div class="conditions__card-wrapper d-fl card-animation-1">
-              <div class="conditions__card">
-                <h5>Продукт <br /><br /></h5>
-                <div class="conditions__card-img">
-                  <svg>
-                    <use xlink:href="main/sprite/icon.svg#icon-settings"></use>
-                  </svg>
-                </div>
-                <p>
-                  Наличие готового продукта (от MVP до промышленного решения)
-                </p>
-              </div>
-              <div class="conditions__card-back"></div>
-            </div>
-
-            <div class="conditions__card-wrapper d-fl card-animation-2">
-              <div class="conditions__card">
-                <h5>Соответствие <br /><br /></h5>
-                <div class="conditions__card-img">
-                  <svg>
-                    <use xlink:href="main/sprite/icon.svg#icon-product"></use>
-                  </svg>
-                </div>
-                <p>Соответствие продукта заявленным направлениям</p>
-              </div>
-              <div class="conditions__card-back"></div>
-            </div>
-
-            <div class="conditions__card-wrapper d-fl card-animation-3">
-              <div class="conditions__card">
-                <h5>Готовность <br /><br /></h5>
-                <div class="conditions__card-img">
-                  <svg>
-                    <use xlink:href="main/sprite/icon.svg#icon-checmark"></use>
-                  </svg>
-                </div>
-                <p>Готовность пилотирования решения в группу компаний ТМК</p>
-              </div>
-              <div class="conditions__card-back"></div>
-            </div>
-
-            <div class="conditions__card-wrapper d-fl card-animation-4">
-              <div class="conditions__card">
-                <h5>Личное участие</h5>
-                <div class="conditions__card-img">
-                  <svg>
-                    <use xlink:href="main/sprite/icon.svg#icon-hands"></use>
-                  </svg>
-                </div>
-                <p>
-                  Готовность основателя стартапа лично принять участие в
-                  программе
-                </p>
-              </div>
-              <div class="conditions__card-back"></div>
-            </div>
-
-            <div class="conditions__card-wrapper d-fl card-animation-5">
-              <div class="conditions__card">
-                <h5>Команда <br /><br /></h5>
-                <div class="conditions__card-img">
-                  <svg>
-                    <use xlink:href="main/sprite/icon.svg#icon-people"></use>
-                  </svg>
-                </div>
-                <p>
-                  Компетентная команда, обладающая опытом создания технологий
-                  и управления бизнесом
-                </p>
-              </div>
-              <div class="conditions__card-back"></div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section__search">
-          <span id="directions"></span>
-          <h4 class="title__section">Направления поиска</h4>
-
-          <div class="search__block-wrapper d-fl-col">
-            <div class="search__block d-fl-wrap start__block-animation">
-              <div class="search__block-img">
-                <div class="search-img">
-                  <img
-                    src=""
-                    alt="industrial"
-                    data="main/img/photo/search-industrial.webp"
-                  />
-                </div>
-                <h3>Новые производственные технологии</h3>
-              </div>
-              <div
-                class="search__block-description search__block-description--right"
-              >
-                <ul class="search__block-list d-fl-col">
-                  <li>
-                    Цифровое моделирование, в том числе цифровое моделирование
-                    новых материалов
-                  </li>
-                  <li>
-                    Моделирование технологических процессов трубного
-                    производства
-                  </li>
-                  <li>
-                    Предиктивная и прескриптивная аналитика в трубном
-                    и сталеплавильном производстве
-                  </li>
-                  <li>Платформы, фреймворки для цифровых двойников</li>
-                  <li>Системы мониторинга состояния персонала</li>
-                  <li>
-                    Решения по цифровизации в области охраны труда
-                    с использованием AR/VR технологий
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div
-              class="search__block search__block--reverse d-fl-wrap start__block-animation"
-            >
-              <div class="search__block-img">
-                <div class="search-img">
-                  <img
-                    src=""
-                    alt="industrial"
-                    data="main/img/photo/search-technology.webp"
-                  />
-                </div>
-                <h3>Новые материалы и технологии нанесения покрытий</h3>
-              </div>
-              <div
-                class="search__block-description search__block-description--right search__block-description--line"
-              >
-                <ul class="search__block-list d-fl-col">
-                  <li>
-                    Новые материалы защитных покрытий для наружной и внутренней
-                    поверхности стальных труб
-                  </li>
-                  <li>
-                    Новые технологии нанесения защитного покрытия на наружную
-                    и внутреннюю поверхность стальных труб
-                  </li>
-                  <li>Антикоррозионные покрытия и способы их нанесения</li>
-                  <li>Новые способы подготовки поверхности стальных труб</li>
-                  <li>
-                    Новые лакокрасочные материалы, стойкие к механическим
-                    повреждениям
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="search__block d-fl-wrap start__block-animation">
-              <div class="search__block-img">
-                <div class="search-img">
-                  <img
-                    src=""
-                    alt="industrial"
-                    data="main/img/photo/search-advanced.webp"
-                  />
-                </div>
-                <h3>Передовые решения для трубной промышленности</h3>
-              </div>
-              <div
-                class="search__block-description search__block-description--right search__block-description--line"
-              >
-                <ul class="search__block-list d-fl-col">
-                  <li>Новые виды трубной продукции</li>
-                  <li>
-                    Повышение эффективности технологических процессов трубного
-                    и сталеплавильного производства
-                  </li>
-                  <li>
-                    Комплексные решения по технологии раскроя трубных заготовок
-                    и новые виды режущего инструмента
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div
-              class="search__block search__block--reverse d-fl-wrap start__block-animation"
-            >
-              <div class="search__block-img">
-                <div class="search-img">
-                  <img
-                    src=""
-                    alt="industrial"
-                    data="main/img/photo/search-marking.webp"
-                  />
-                </div>
-                <h3>Сквозной контроль качества и маркировка продукции</h3>
-              </div>
-              <div
-                class="search__block-description search__block-description--right search__block-description--line"
-              >
-                <ul class="search__block-list d-fl-col">
-                  <li>Сквозной контроль качества и маркировки продукции</li>
-                  <li>
-                    Нестандартные и инновационные системы неразрушающего
-                    контроля
-                  </li>
-                  <li>Бесконтактные методы измерения</li>
-                </ul>
-              </div>
-            </div>
-            <div class="search__block d-fl-wrap start__block-animation">
-              <div class="search__block-img">
-                <div class="search-img">
-                  <img
-                    src=""
-                    alt="industrial"
-                    data="main/img/photo/search-ecology.webp"
-                  />
-                </div>
-                <h3>
-                  Экология металлургического производства и декарбонизация
-                  электрометаллургии
-                </h3>
-              </div>
-              <div
-                class="search__block-description search__block-description--right search__block-description--line"
-              >
-                <ul class="search__block-list d-fl-col">
-                  <li>
-                    Водородная энергетика, в том числе решения для
-                    транспортировки и хранения водорода
-                  </li>
-                  <li>Декарбонизация производства</li>
-                  <li>
-                    Природоохранные технологии в части снижения выбросов (CO,
-                    NOx, Sox и др) и сбросов (нефтепродукты, взвешенные
-                    вещества, хпк, бпк,азот, фосфор, металлы в растворенном виде
-                    и др) загрязняющих веществ
-                  </li>
-                  <li>
-                    Эффективные технологии переработки и утилизации отходов
-                    производства
-                  </li>
-                  <li>
-                    Приготовление исходного сырья для выплавки стали в дсп
-                    из отходов металлургического производства
-                  </li>
-                  <li>Обезмасливание окалины</li>
-                  <li>
-                    Улавливание и утилизация СО2 с получением товарного продукта
-                  </li>
-                  <li>Шумозащита и мероприятия шумоподавления</li>
-                </ul>
-              </div>
-            </div>
-
-            <div
-              class="search__block search__block--reverse d-fl-wrap start__block-animation"
-            >
-              <div class="search__block-img">
-                <div class="search-img">
-                  <img
-                    src=""
-                    alt="industrial"
-                    data="main/img/photo/search-tmk.webp"
-                  />
-                </div>
-                <h3>
-                  Целевые запросы для производственных площадок группы ТМК
-                </h3>
-              </div>
-              <div
-                class="search__block-description search__block-description--right search__block-description--line"
-              >
-                <ul class="search__block-list d-fl-col">
-                  <li>Заполняется по мере поступления запросов</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section__stages">
-          <span id="stages"></span>
-          <h4 class="title__section">Этапы</h4>
-
-          <div class="stages__block-wrapper">
-            <div class="stages__block">
-              <div class="stages__card d-fl-col card-animation-1">
-                <div class="stages__img">
-                  <img src="" alt="request" data="main/img/icon/request.png" />
-                </div>
-                <h6>Прием <br />заявок</h6>
-              </div>
-              <div class="stages__card d-fl-col card-animation-2">
-                <div class="stages__img">
-                  <img
-                    src=""
-                    alt="request"
-                    data="main/img/icon/expertise.png"
-                  />
-                </div>
-                <h6>Экспертиза</h6>
-              </div>
-              <div class="stages__card d-fl-col card-animation-3">
-                <div class="stages__img">
-                  <img
-                    src=""
-                    alt="request"
-                    data="main/img/icon/preparation.png"
-                  />
-                </div>
-                <h6>Подготовка к пилотному внедрению</h6>
-              </div>
-              <div class="stages__card d-fl-col card-animation-4">
-                <div class="stages__img">
-                  <img
-                    src=""
-                    alt="request"
-                    data="main/img/icon/implementation.png"
-                  />
-                </div>
-                <h6>Пилотное <br />внедрение</h6>
-              </div>
-              <div class="stages__card d-fl-col card-animation-5">
-                <div class="stages__img">
-                  <img src="" alt="request" data="main/img/icon/analise.png" />
-                </div>
-                <h6>Анализ <br />пилота</h6>
-              </div>
-              <div class="stages__card d-fl-col card-animation-6">
-                <div class="stages__img">
-                  <img
-                    src=""
-                    alt="request"
-                    data="main/img/icon/industrial.png"
-                  />
-                </div>
-                <h6>Промышленное внедрение</h6>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section__team">
-          <span id="team"></span>
-          <h4 class="title__section">Команда экспертов</h4>
-
-          <div class="slider title-animation d-fl">
-            <div class="slider__item">
-              <div class="slider__item-img">
-                <img src="" alt="pic" data="main/img/photo/pishmincev.webp" />
-              </div>
-              <div class="slier__description">
-                <h6>Пышминцев Игорь Юрьевич</h6>
-                <span>Директор по научной работе</span>
-              </div>
-            </div>
-
-            <div class="slider__item">
-              <div class="slider__item-img">
-                <img src="" alt="pic" data="main/img/photo/shadrina.webp" />
-              </div>
-              <div class="slier__description">
-                <h6>Шадрина Юлия Викторовна</h6>
-                <span>Директор по инновационному развитию</span>
-              </div>
-            </div>
-
-            <div class="slider__item">
-              <div class="slider__item-img">
-                <img src="" alt="pic" data="main/img/photo/gizatulin.webp" />
-              </div>
-              <div class="slier__description">
-                <h6>Гизатуллин Антон Бильгуварович</h6>
-                <span>Заместитель Директора по научной работе</span>
-              </div>
-            </div>
-
-            <div class="slider__item">
-              <div class="slider__item-img">
-                <img src="" alt="pic" data="main/img/photo/illina.webp" />
-              </div>
-              <div class="slier__description">
-                <h6>Ильина Мария Вадимовна</h6>
-                <span
-                  >Начальник отдела реализации инновационных проектов и
-                  НВП</span
-                >
-              </div>
-            </div>
-
-            <div class="slider__item">
-              <div class="slider__item-img">
-                <img src="" alt="pic" data="main/img/photo/arsenkin.webp" />
-              </div>
-              <div class="slier__description">
-                <h6>Арсенкин Александр Михайлович</h6>
-                <span
-                  >Заместитель заведующего лабораторией материаловедения и
-                  сварки</span
-                >
-              </div>
-            </div>
-
-            <div class="slider__item">
-              <div class="slider__item-img">
-                <img src="" alt="pic" data="main/img/photo/prikina.webp" />
-              </div>
-              <div class="slier__description">
-                <h6>Прыкина Юлия Вячеславовна</h6>
-                <span
-                  >Заведующая лабораторией полимерных, композиционных,
-                  лакокрасочных материалов</span
-                >
-              </div>
-            </div>
-
-            <div class="slider__item">
-              <div class="slider__item-img">
-                <img src="" alt="pic" data="main/img/photo/shkuratov.webp" />
-              </div>
-              <div class="slier__description">
-                <h6>Шкуратов Евгений Александрович</h6>
-                <span>Начальник отдела цифровизации технологий</span>
-              </div>
-            </div>
-
-            <div class="slider__item">
-              <div class="slider__item-img">
-                <img src="" alt="pic" data="main/img/photo/mihaylova.webp" />
-              </div>
-              <div class="slier__description">
-                <h6>Михайлова Елена Николаевна</h6>
-                <span>Главный эколог</span>
-              </div>
-            </div>
-            <div class="slider__item">
-              <div class="slider__item-img">
-                <img src="" alt="pic" data="main/img/photo/podgornih.webp" />
-              </div>
-              <div class="slier__description">
-                <h6>Подгорных Елена Владимировна</h6>
-                <span
-                  >Заместитель начальника Управления эффективностью
-                  производственной экологии</span
-                >
-              </div>
-            </div>
-            <div class="slider__item">
-              <div class="slider__item-img">
-                <img src="" alt="pic" data="main/img/photo/lunev.webp" />
-              </div>
-              <div class="slier__description">
-                <h6>Лунев Александр Алексеевич</h6>
-                <span
-                  >Начальник центра математического моделирования и методов
-                  искусственного интеллекта</span
-                >
-              </div>
-            </div>
-            <div class="slider__item">
-              <div class="slider__item-img">
-                <img src="" alt="pic" data="main/img/photo/pasuta.webp" />
-              </div>
-              <div class="slier__description">
-                <h6>Пасюта Антон Павлович</h6>
-                <span>Руководитель сервиса технических программ обучения</span>
-              </div>
-            </div>
-            <div class="slider__item">
-              <div class="slider__item-img">
-                <img src="" alt="pic" data="main/img/photo/kormilcev.webp" />
-              </div>
-              <div class="slier__description">
-                <h6>Кормильцев Алексей Владимирович</h6>
-                <span
-                  >Начальник отдела реализации проектов по новым видам
-                  индустриальных труб</span
-                >
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section__request">
-          <span id="feedback"></span>
-          <div class="request__title d-fl"><span>Заявка</span></div>
-
-          <form
-            class="request__form start__block-animation"
-            id="ajax-contact-form"
-            enctype="multipart/form-data"
-            method="post"
-          >
-            <p class="form__info-description">
-              обязательные для заполнения поля
-            </p>
-
-            <div class="request__form-wrapper d-fl-col">
-              <div class="input__item">
-                <input
-                  class="input__form"
-                  type="text"
-                  name="nameFF"
-                  id="nameFF"
-                  required
-                  autocomplete="off"
-                  placeholder=" "
-                />
-                <label class="label__form" for="nameFF">ФИО</label>
-              </div>
-
-              <div class="input__item">
-                <input
-                  class="input__form"
-                  type="tel"
-                  name="telFF"
-                  id="telFF"
-                  required
-                  autocomplete="off"
-                  placeholder=" "
-                />
-                <label class="label__form" for="telFF">Телефон</label>
-              </div>
-
-              <div class="input__item">
-                <input
-                  class="input__form"
-                  type="email"
-                  name="contactFF"
-                  id="contactFF"
-                  required
-                  autocomplete="off"
-                  placeholder=" "
-                />
-                <label class="label__form" for="contactFF"
-                  >Электронная почта</label
-                >
-              </div>
-
-              <div class="input__item">
-                <input
-                  class="input__form"
-                  type="text"
-                  name="companyFF"
-                  id="companyFF"
-                  autocomplete="off"
-                  placeholder=" "
-                />
-                <label class="label__form" for="companyFF"
-                  >Полное название юр. лица</label
-                >
-              </div>
-
-              <div class="input__item">
-                <input
-                  class="input__form"
-                  type="text"
-                  name="tinFF"
-                  id="tinFF"
-                  autocomplete="off"
-                  placeholder=" "
-                />
-                <label class="label__form" for="tinFF">ИНН</label>
-              </div>
-
-              <div class="input__item">
-                <input
-                  class="input__form"
-                  type="text"
-                  name="projectFF"
-                  id="projectFF"
-                  autocomplete="off"
-                  placeholder=" "
-                />
-                <label class="label__form" for="projectFF"
-                  >Название проекта</label
-                >
-              </div>
-
-              <div class="input__item">
-                <input
-                  class="input__form"
-                  type="text"
-                  name="businesFF"
-                  id="businesFF"
-                  autocomplete="off"
-                  placeholder=" "
-                />
-                <label class="label__form" for="businesFF"
-                  >Описание потенциального эффекта</label
-                >
-              </div>
-
-              <div class="input__item">
-                <input
-                  class="input__form"
-                  type="text"
-                  name="descriptionFF"
-                  id="descriptionFF"
-                  autocomplete="off"
-                  placeholder=" "
-                />
-                <label class="label__form" for="descriptionFF"
-                  >Описание проекта</label
-                >
-              </div>
-            </div>
-
-            <div class="form__btn d-fl-wrap">
-              <div class="input__file-wrapper d-fl-col">
-                <span class="input__file-description"
-                  >Загрузите презентацию своего проекта:</span
-                >
-                <input
-                  name="fileFF"
-                  type="file"
-                  id="fileFF"
-                  class="input input__file"
-                  multiple
-                />
-                <label
-                  for="fileFF"
-                  class="input__file-button btn__animation-orange"
-                >
-                  <span class="input__file-button--text">Загрузить файл</span>
-                </label>
-              </div>
-            </div>
-
-            <div class="input__agreement d-fl-col">
-              <div class="d-fl-col">
-                <div class="radio">
-                  <input
-                    class="custom-radio"
-                    type="radio"
-                    id="color-1"
-                    name="color-1"
-                    value="personalDate"
-                    required
-                  />
-                  <label class="radio-label" for="color-1"
-                    >Согласен/на на обработку персональных данных</label
-                  >
-                </div>
-                <div class="radio">
-                  <input
-                    class="custom-radio"
-                    type="radio"
-                    id="color-4"
-                    name="color-4"
-                    value="rule"
-                    required
-                  />
-                  <label class="radio-label" for="color-4"
-                    >Согласен/на с правилами участия в программе</label
-                  >
-                </div>
-              </div>
-            </div>
-
-            <button class="submit__form" type="submit" id="submitFF">
-              Отправить
-            </button>
-          </form>
-          <span id="questions"></span>
-        </section>
-
-        <section class="section__question">
-          <h4 class="title__section">Частые вопросы</h4>
-
-          <article class="arcticle__question d-fl-col">
-            <div class="question__block about__paragraph-animation-left">
-              <h3>
-                Должен ли я передать интеллектуальные права по завершение
-                акселерационной программы?
-              </h3>
-              <p>
-                Нет. Права, принадлежащие заявителю, не передаются в рамках
-                программы. В случае, если результат интеллектуальной
-                собственности был создан на основе данных группы компаний ТМК,
-                то такой РИД передается в компанию.
-              </p>
-            </div>
-
-            <div class="question__block about__paragraph-animation-right">
-              <h3>
-                Должен ли я делиться конфиденциальной информацией о проекте?
-              </h3>
-              <p>
-                Нет. Указывайте в заявке на отбор только те данные, для которых
-                не нужно соглашение о неразглашении конфиденциальной информации.
-              </p>
-            </div>
-
-            <div class="question__block about__paragraph-animation-left">
-              <h3>Могут ли физические лица участвовать в программе?</h3>
-              <p>
-                Подать заявку на участие можно как физическому лицу, так и
-                юридическому. В случае успешного отбора физического лица,
-                необходимо будет оформить юридическое лицо.
-              </p>
-            </div>
-
-            <div class="question__block about__paragraph-animation-right">
-              <h3>Могу ли я подать несколько заявок?</h3>
-              <p>
-                Да. Каждый участник может подать неограниченное количество
-                заявок (без дублирования).
-              </p>
-            </div>
-          </article>
-        </section>
-
-        <section class="section__partners">
-          <h4 class="partners__title">Партнеры</h4>
-
-          <div class="partners__block d-fl">
-            <a
-              target="_blank"
-              href="https://rusnatt.ru/"
-              class="partners__block-img slider-animation-1"
-            >
-              <svg>
-                <use xlink:href="main/sprite/icon.svg#partners-1"></use>
-              </svg>
-            </a>
-            <a
-              target="_blank"
-              href="https://platform.nti.work/"
-              class="partners__block-img slider-animation-2"
-            >
-              <svg>
-                <use xlink:href="main/sprite/icon.svg#partners-2"></use>
-              </svg>
-            </a>
-            <a
-              target="_blank"
-              href="https://digital-natt.ru/"
-              class="partners__block-img slider-animation-3"
-            >
-              <svg>
-                <use xlink:href="main/sprite/icon.svg#partners-3"></use>
-              </svg>
-            </a>
-            <a
-              target="_blank"
-              href="https://ma.innoagency.ru/"
-              class="partners__block-img slider-animation-4"
-            >
-              <svg>
-                <use xlink:href="main/sprite/icon.svg#partners-4"></use>
-              </svg>
-            </a>
-          </div>
-        </section>
-
-        <section class="section__news d-fl-col">
-          <span id="news"></span>
-          <h4 class="title__section">Новости</h4>
-
-          <div class="news__block-grid start__block-animation">
-            <article class="news__card">
-              <a href="https://www.tmk-group.ru/">
-                <div class="news__card-img">
-                  <img
-                    src="main/img/photo/newsCard-1.webp"
-                    alt="news__card"
-                    data="main/img/photo/newsCard-1.webp"
-                  />
-                </div>
-                <span>17.03.21</span>
-                <h6>
-                  ТМК отберет стартапы и проведет мастер-классы на Startup
-                  Village в Сколково
-                </h6>
-              </a>
-            </article>
-
-            <article class="news__card">
-              <a href="https://www.tmk-group.ru/">
-                <div class="news__card-img">
-                  <img
-                    src=""
-                    alt="news__card"
-                    data="main/img/photo/newsCard-2.webp"
-                  />
-                </div>
-                <span>17.03.21</span>
-                <h6>
-                  ТМК и Группа Синара приняли участие в Петербургском
-                  международном экономическом форуме
-                </h6>
-              </a>
-            </article>
-
-            <article class="news__card">
-              <a href="https://www.tmk-group.ru/">
-                <div class="news__card-img">
-                  <img
-                    src=""
-                    alt="news__card"
-                    data="main/img/photo/newsCard-3.webp"
-                  />
-                </div>
-                <span>06.05.21</span>
-                <h6>
-                  ТМК на ПМЭФ-2021 представила опыт организации работы в
-                  условиях пандемии
-                </h6>
-              </a>
-            </article>
-          </div>
-
-          <a
-            href="https://www.tmk-group.ru/"
-            id="btn-hidden"
-            class="news__btn-more"
-            >Больше</a
-          >
-        </section>
-
-        <div class="scroll__btn d-fl-col js-back__top">
-          <a href="#section__start" class="start__btn">К началу</a>
-        </div>
-
-        <section class="section__info">
-          <video
-            poster="main/img/background/info.webp"
-            preload="auto"
-            autoplay
-            muted
-            loop
-            class="start__video video__footer"
-          >
-            <source type="video/webm" src="main/video/TMK-R&D-03-Film.webm" />
-            <source type="video/mp4" src="main/video/TMK-R&D-03-Film.mp4" />
-          </video>
-          <div class="start__video-back"></div>
-        </section>
-      </main>
-
-      <footer class="footer d-fl-col">
-        <div class="footer-top d-fl">
-          <a href="#section__start" class="header__logo">
-            <svg>
-              <use xlink:href="main/sprite/icon.svg#icon-logo"></use>
-            </svg>
-          </a>
-          <div class="header__mobile-btn">
-            <span></span>
-            <span></span>
-          </div>
-          <div class="header-right d-fl">
-            <div class="header__mobile-btn-close">
-              <span></span>
-              <span></span>
-            </div>
-
-            <nav class="header__nav d-fl-col">
-              <ul class="d-fl">
-                <li><a href="#about">О нас</a></li>
-                <li><a href="#offer">Мы предлагаем</a></li>
-                <li><a href="#conditions">Условия</a></li>
-                <li><a href="#directions">Направления</a></li>
-                <li><a href="#stages">Этапы</a></li>
-                <li><a href="#team">Команда</a></li>
-                <li><a href="#questions">Частые вопросы</a></li>
-                <li><a href="#news">Новости</a></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-
-        <div class="footer__bottom d-fl-wrap">
-          <div class="footer__bottom-left d-fl-col">
-            <span>© 2023 TMK R&D</span>
-            <span>Все права защищены</span>
-          </div>
-          <div class="footer__bottom-center d-fl-col">
-            <div class="footer-center d-fl-col">
-              <span>Контакты</span>
-              <a href="/">innovations@tmk-group.com</a>
-            </div>
-
-            <a href="#feedback" class="request__btn btn__animation-orange"
-              >Подать заявку</a
-            >
-          </div>
-          <div class="footer__bottom-right">
-            <a href="/"
-              >Политика<br />
-              конфиденциальности</a
-            >
-          </div>
-        </div>
-      </footer>
-    </div>
-
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
-      integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
-    <script
-      type="text/javascript"
-      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-    ></script>
-
-    <script src="main/js/sweetalert.min.js"></script>
-    <script src="main/js/form.js?v=10"></script>
-  </body>
 </html>
