@@ -3,7 +3,7 @@
     $to = "innovations@tmk-group.com"; // своя почта
     $from = "no-reply@innovations.tmk-group.ru";
     $subject = "Регистрация";
-  $message = "\n\nУважаемый администратор!\n\n\n\n На вашем сайте ".$_SERVER['HTTP_REFERER']."появилось новое сообщение с формы Регистрация.\n\n\n\nЧтобы его посмотреть, перейдите по ссылке https://innovations.tmk-group.ru/\n\n\n\nДанные из формы:\n\n\n\nФИО: ".$_POST['nameFF']."\n\nТелефон: ".$_POST['telFF']."\n\nЭлектронная почта: ".$_POST['contactFF']."\n\nПолное фирменное название юр. лица: ".$_POST['companyFF']."\n\nИНН ".$_POST['tinFF']."\n\nНазвание вашего проекта: ".$_POST['projectFF']."\n\nКраткое описание проекта: ".$_POST['descriptionFF']."\n\nОписание потенциального эффекта для бизнеса ТМК: ".$_POST['businesFF']."\n\n------------------------\n\nСогласен с правилами участия в конкурсе: да";
+  $message = "\n\nУважаемый администратор!\n\n\n\n На вашем сайте .$_SERVER['HTTP_REFERER'] появилось новое сообщение с формы Регистрация.\n\n\n\nЧтобы его посмотреть, перейдите по ссылке https://innovations.tmk-group.ru/\n\n\n\nДанные из формы:\n\n\n\nФИО: ".$_POST['nameFF']."\n\nТелефон: ".$_POST['telFF']."\n\nЭлектронная почта: ".$_POST['contactFF']."\n\nПолное фирменное название юр. лица: ".$_POST['companyFF']."\n\nИНН ".$_POST['tinFF']."\n\nНазвание вашего проекта: ".$_POST['projectFF']."\n\nКраткое описание проекта: ".$_POST['descriptionFF']."\n\nОписание потенциального эффекта для бизнеса ТМК: ".$_POST['businesFF']."\n\n------------------------\n\nСогласен с правилами участия в конкурсе: да";
    
     $boundary = md5(date('r', time()));
     $filesize = 0;
