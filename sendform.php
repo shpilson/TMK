@@ -1,8 +1,8 @@
 <?php
 if (isset ($_POST['contactFF'])) {
   $to = "innovations@tmk-group.com"; // своя почта
-  $from = "support@tpverstak.ru";
-  $subject = "Заполнена контактная форма на сайте ".$_SERVER['HTTP_REFERER'];
+  $from = "no-reply@innovations.tmk-group.ru";
+  $subject = "Регистрация";
 $message = "\n\nИмя пользователя: ".$_POST['nameFF']."\n\nЭлектронная почта: ".$_POST['contactFF']."\n\nТелефон пользователя: ".$_POST['telFF']."\n\nПолное название юр. лица: ".$_POST['companyFF']."\n\nИНН ".$_POST['tinFF']."\n\nНазвание проекта: ".$_POST['projectFF']."\n\nПотребность в инвестициях (руб.): ".$_POST['investmentsFF']."\n\nОписание проекта: ".$_POST['descriptionFF']."\n\nОписание потенциального эффекта для бизнеса ТМК: ".$_POST['businesFF']."\n\nАдрес сайта: ".$_SERVER['HTTP_REFERER'];
  
   $boundary = md5(date('r', time()));
