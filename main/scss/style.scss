@@ -538,19 +538,18 @@ $fontArial: "Arial", "sans-serif";
     -o-transition: 0.3s;
   }
 
-  // &:hover {
-  //   svg {
-  //     fill: $colorOrange;
-  //   }
-  // }
+  &:hover {
+    svg {
+      fill: $colorOrange;
+    }
+  }
 }
 
 .header-right {
   align-self: flex-start;
   align-items: center;
   flex: 1 1 auto;
-  padding: 0 adaptiv-num-rem(0, 65, 1920, 940) 0
-    adaptiv-num-rem(0, 145, 1920, 940);
+  padding: 0 adaptiv-num-rem(0, 65, 1920, 940) 0 adaptiv-num-rem(0, 145, 1920, 940);
   @media (max-width: 940px) {
     display: none;
   }
@@ -861,8 +860,8 @@ $fontArial: "Arial", "sans-serif";
 
 .about__card {
   background: linear-gradient(180deg, #cacaca 0%, rgba(217, 217, 217, 0) 100%);
-  padding: clamp(rem(25), 2.08vw, rem(40)) clamp(rem(15), 1.56vw, rem(30))
-    clamp(rem(25), 2.08vw, rem(40)) clamp(rem(25), 2.86vw, rem(55));
+  padding: clamp(rem(25), 2.08vw, rem(40)) clamp(rem(15), 1.56vw, rem(30)) clamp(rem(25), 2.08vw, rem(40))
+    clamp(rem(25), 2.86vw, rem(55));
   max-width: rem(315);
 
   span {
@@ -922,8 +921,8 @@ $fontArial: "Arial", "sans-serif";
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding: clamp(rem(55), 7.81vw, rem(150)) adaptiv-num-rem(28, 240, 1920, 360)
-    clamp(rem(55), 7.81vw, rem(150)) adaptiv-num-rem(28, 240, 1920, 360);
+  padding: clamp(rem(55), 7.81vw, rem(150)) adaptiv-num-rem(28, 240, 1920, 360) clamp(rem(55), 7.81vw, rem(150))
+    adaptiv-num-rem(28, 240, 1920, 360);
   gap: clamp(rem(55), 5.73vw, rem(110));
 }
 
@@ -1003,8 +1002,7 @@ $fontArial: "Arial", "sans-serif";
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(rem(200), 1fr));
   gap: rem(35);
-  padding: clamp(rem(20), 7.29vw, rem(140)) clamp(rem(25), 4.69vw, rem(90)) 0
-    clamp(rem(25), 4.69vw, rem(90));
+  padding: clamp(rem(20), 7.29vw, rem(140)) clamp(rem(25), 4.69vw, rem(90)) 0 clamp(rem(25), 4.69vw, rem(90));
 
   @media (max-width: 490px) {
     grid-template-columns: repeat(auto-fit, minmax(rem(180), 1fr));
@@ -1300,15 +1298,15 @@ $fontArial: "Arial", "sans-serif";
   background: linear-gradient(180deg, #cacaca 0%, rgba(217, 217, 217, 0) 100%);
 
   &--right {
-    padding: clamp(rem(10), 3.91vw, rem(75)) adaptiv-num-rem(20, 60, 1920, 360)
-      clamp(rem(30), 3.13vw, rem(60)) adaptiv-num-rem(20, 120, 1920, 360);
+    padding: clamp(rem(10), 3.91vw, rem(75)) adaptiv-num-rem(20, 60, 1920, 360) clamp(rem(30), 3.13vw, rem(60))
+      adaptiv-num-rem(20, 120, 1920, 360);
   }
 }
 
 .search__block--reverse {
   & > .search__block-description--right {
-    padding: clamp(rem(10), 3.91vw, rem(75)) adaptiv-num-rem(20, 60, 1920, 360)
-      clamp(rem(10), 3.13vw, rem(60)) adaptiv-num-rem(20, 200, 1920, 360);
+    padding: clamp(rem(10), 3.91vw, rem(75)) adaptiv-num-rem(20, 60, 1920, 360) clamp(rem(10), 3.13vw, rem(60))
+      adaptiv-num-rem(20, 200, 1920, 360);
   }
 }
 
@@ -1512,8 +1510,7 @@ $fontArial: "Arial", "sans-serif";
 
 /*------------------SLIDER------------------*/
 .slider {
-  padding: 0 clamp(rem(80), 13.54vw, rem(260)) clamp(rem(25), 3.13vw, rem(60))
-    clamp(rem(25), 3.13vw, rem(60));
+  padding: 0 clamp(rem(80), 13.54vw, rem(260)) clamp(rem(25), 3.13vw, rem(60)) clamp(rem(25), 3.13vw, rem(60));
   margin-top: clamp(rem(45), 8.85vw, rem(170));
   gap: rem(65);
 }
@@ -1632,8 +1629,7 @@ $fontArial: "Arial", "sans-serif";
   cursor: pointer;
 
   @media (max-width: 899px) {
-    background: url("../../main/img/icon/arrow-slider-mobile.svg") 0 0 / 100%
-      no-repeat;
+    background: url("../../main/img/icon/arrow-slider-mobile.svg") 0 0 / 100% no-repeat;
     height: rem(30);
     top: clamp(rem(30), 16.69vw, rem(150));
   }
@@ -1839,8 +1835,8 @@ $fontArial: "Arial", "sans-serif";
   font-size: clamp(rem(16), 1.25vw, rem(24));
   line-height: clamp(rem(18), 1.46vw, rem(28));
   color: #000000;
-  padding: clamp(rem(23), 1.82vw, rem(35)) clamp(rem(40), 3.13vw, rem(60))
-    clamp(rem(23), 1.82vw, rem(35)) clamp(rem(20), 2.08vw, rem(40));
+  padding: clamp(rem(23), 1.82vw, rem(35)) clamp(rem(40), 3.13vw, rem(60)) clamp(rem(23), 1.82vw, rem(35))
+    clamp(rem(20), 2.08vw, rem(40));
   border: rem(2) solid #000000;
 
   &-icon {
@@ -2012,8 +2008,7 @@ $fontArial: "Arial", "sans-serif";
 .title__section {
 }
 .arcticle__question {
-  padding: 0 clamp(rem(25), 13.02vw, rem(250)) 0
-    clamp(rem(25), 10.42vw, rem(200));
+  padding: 0 clamp(rem(25), 13.02vw, rem(250)) 0 clamp(rem(25), 10.42vw, rem(200));
   // gap: clamp(rem(10), 0.78vw, rem(15));
 }
 
@@ -2112,8 +2107,7 @@ $fontArial: "Arial", "sans-serif";
 
 .partners__block {
   justify-content: space-between;
-  padding: adaptiv-num-rem(50, 155, 1920, 360)
-    adaptiv-num-rem(15, 190, 1920, 360) 0 adaptiv-num-rem(15, 190, 1920, 360);
+  padding: adaptiv-num-rem(50, 155, 1920, 360) adaptiv-num-rem(15, 190, 1920, 360) 0 adaptiv-num-rem(15, 190, 1920, 360);
   align-items: center;
   gap: adaptiv-num-rem(10, 20, 1920, 360);
 
@@ -2189,8 +2183,7 @@ $fontArial: "Arial", "sans-serif";
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(rem(300), 1fr));
   gap: rem(25);
-  padding: rem(75) clamp(rem(25), 2.6vw, rem(50))
-    clamp(rem(50), 7.03vw, rem(135)) clamp(rem(25), 2.6vw, rem(50));
+  padding: rem(75) clamp(rem(25), 2.6vw, rem(50)) clamp(rem(50), 7.03vw, rem(135)) clamp(rem(25), 2.6vw, rem(50));
 }
 
 .news__card {
@@ -2291,8 +2284,8 @@ $fontArial: "Arial", "sans-serif";
 /*------------------FOOTER------------------*/
 .footer {
   background-color: #000000;
-  padding: adaptiv-num-rem(20, 85, 1920, 360) adaptiv-num-rem(15, 80, 1920, 360)
-    adaptiv-num-rem(40, 100, 1920, 360) adaptiv-num-rem(15, 80, 1920, 360);
+  padding: adaptiv-num-rem(20, 85, 1920, 360) adaptiv-num-rem(15, 80, 1920, 360) adaptiv-num-rem(40, 100, 1920, 360)
+    adaptiv-num-rem(15, 80, 1920, 360);
 }
 
 .footer-top {
