@@ -572,6 +572,10 @@ html {
   }
 }
 
+.header__logo:hover svg {
+  fill: #dd6f2d;
+}
+
 .header-scrolled>.header__logo {
   padding: 0;
   width: 3.4375rem;
